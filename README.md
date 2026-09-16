@@ -1,5 +1,7 @@
 <img src=https://raw.githubusercontent.com/databricks-industry-solutions/.github/main/profile/solacc_logo.png width="600px">
 
+# funke — native HL7v2 parsing for the Databricks Lakehouse
+
 [![DBR](https://img.shields.io/badge/DBR-16.4-red?logo=databricks&style=for-the-badge)](https://docs.databricks.com/release-notes/runtime/CHANGE_ME.html)
 [![CLOUD](https://img.shields.io/badge/CLOUD-ALL-blue?logo=googlecloud&style=for-the-badge)](https://databricks.com/try-databricks)
 
@@ -19,6 +21,38 @@ This project provides a robust, native solution for ingesting and parsing HL7v2 
 2. Open the directory in the Asset Bundle editor
 3. Click _Deploy_
 4. Upload HL7 messages to the automatically created `landing` volume and click _Run_ on the pipeline
+
+## Using the `funke` library directly
+
+The pipeline above installs `funke` for you (the Asset Bundle builds and attaches the wheel).
+To use the parser on its own — in a notebook, a job, or locally — install it from source:
+
+```bash
+git clone <this-repo> && cd <this-repo>
+pip install .              # add the [local] extra to also pull in PySpark: pip install ".[local]"
+```
+
+Parse a single message in plain Python:
+
+```python
+from funke.parsing.hl7 import HL7v2Msg
+
+raw = "MSH|^~\\&|...\rPID|...\r..."   # a raw HL7v2 message string
+msg = HL7v2Msg(raw)
+msg.segments   # -> parsed segments, addressable as fields[field][rep][component][subcomponent]
+```
+
+Parse a whole DataFrame column with the provided Spark UDF (this is exactly what the
+bronze → silver pipeline does):
+
+```python
+import pyspark.sql.functions as F
+from funke.parsing.functions import parse_hl7v2_msg
+from funke.parsing.hl7 import HL7v2Schema
+
+parse = parse_hl7v2_msg(HL7v2Schema())
+parsed_df = raw_df.withColumn("hl7", parse(F.col("content")))
+```
 
 ## Reference Architecture
 
