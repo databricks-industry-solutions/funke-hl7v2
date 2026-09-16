@@ -1,0 +1,6 @@
+resources:
+  schemas:
+    primary:
+      catalog_name: ${var.catalog}
+      name: ${var.schema}
+      

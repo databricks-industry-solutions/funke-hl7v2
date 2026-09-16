@@ -1,0 +1,10 @@
+command: ["python", "app.py"]
+env:
+  # Injected from the app resource bindings in resources/demo/adt_app.app.yml.
+  # The warehouse id backs the census rehydrate query; the volume path
+  # (/Volumes/<catalog>/<schema>/<landing>) is where realtime HL7 files are written and is also
+  # parsed for the catalog/schema used in the census FQN.
+  - name: DATABRICKS_WAREHOUSE_ID
+    valueFrom: warehouse
+  - name: LANDING_VOLUME_PATH
+    valueFrom: landing-volume

@@ -1,0 +1,5762 @@
+{
+    "ACC": {
+        "1": {
+            "type": "TS",
+            "longName": "Accident Date/Time"
+        },
+        "2": {
+            "type": "CE_0050",
+            "longName": "Accident Code"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Accident Location"
+        },
+        "4": {
+            "type": "CE_0347",
+            "longName": "Auto Accident State"
+        },
+        "5": {
+            "type": "ID",
+            "longName": "Accident Job Related Indicator"
+        },
+        "6": {
+            "type": "ID",
+            "longName": "Accident Death Indicator"
+        }
+    },
+    "AIG": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - AIG"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Segment Action Code"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Resource ID"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Resource Type"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Resource Group"
+        },
+        "6": {
+            "type": "NM",
+            "longName": "Resource Quantity"
+        },
+        "7": {
+            "type": "CE",
+            "longName": "Resource Quantity Units"
+        },
+        "8": {
+            "type": "TS",
+            "longName": "Start Date/Time"
+        },
+        "9": {
+            "type": "NM",
+            "longName": "Start Date/Time Offset"
+        },
+        "10": {
+            "type": "CE",
+            "longName": "Start Date/Time Offset Units"
+        },
+        "11": {
+            "type": "NM",
+            "longName": "Duration"
+        },
+        "12": {
+            "type": "CE",
+            "longName": "Duration Units"
+        },
+        "13": {
+            "type": "IS",
+            "longName": "Allow Substitution Code"
+        },
+        "14": {
+            "type": "CE_0278",
+            "longName": "Filler Status Code"
+        }
+    },
+    "AIL": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - AIL"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Segment Action Code"
+        },
+        "3": {
+            "type": "PL",
+            "longName": "Location Resource ID"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Location Type-AIL"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Location Group"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Start Date/Time"
+        },
+        "7": {
+            "type": "NM",
+            "longName": "Start Date/Time Offset"
+        },
+        "8": {
+            "type": "CE",
+            "longName": "Start Date/Time Offset Units"
+        },
+        "9": {
+            "type": "NM",
+            "longName": "Duration"
+        },
+        "10": {
+            "type": "CE",
+            "longName": "Duration Units"
+        },
+        "11": {
+            "type": "IS",
+            "longName": "Allow Substitution Code"
+        },
+        "12": {
+            "type": "CE_0278",
+            "longName": "Filler Status Code"
+        }
+    },
+    "AIP": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - AIP"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Segment Action Code"
+        },
+        "3": {
+            "type": "XCN",
+            "longName": "Personnel Resource ID"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Resource Role"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Resource Group"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Start Date/Time"
+        },
+        "7": {
+            "type": "NM",
+            "longName": "Start Date/Time Offset"
+        },
+        "8": {
+            "type": "CE",
+            "longName": "Start Date/Time Offset Units"
+        },
+        "9": {
+            "type": "NM",
+            "longName": "Duration"
+        },
+        "10": {
+            "type": "CE",
+            "longName": "Duration Units"
+        },
+        "11": {
+            "type": "IS",
+            "longName": "Allow Substitution Code"
+        },
+        "12": {
+            "type": "CE_0278",
+            "longName": "Filler Status Code"
+        }
+    },
+    "AIS": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - AIS"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Segment Action Code"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Universal Service ID"
+        },
+        "4": {
+            "type": "TS",
+            "longName": "Start Date/Time"
+        },
+        "5": {
+            "type": "NM",
+            "longName": "Start Date/Time Offset"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Start Date/Time Offset Units"
+        },
+        "7": {
+            "type": "NM",
+            "longName": "Duration"
+        },
+        "8": {
+            "type": "CE",
+            "longName": "Duration Units"
+        },
+        "9": {
+            "type": "IS",
+            "longName": "Allow Substitution Code"
+        },
+        "10": {
+            "type": "CE_0278",
+            "longName": "Filler Status Code"
+        }
+    },
+    "AL1": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - AL1"
+        },
+        "2": {
+            "type": "IS",
+            "longName": "Allergy Type"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Allergy Code/Mnemonic/Description"
+        },
+        "4": {
+            "type": "IS",
+            "longName": "Allergy Severity"
+        },
+        "5": {
+            "type": "ST",
+            "longName": "Allergy Reaction"
+        },
+        "6": {
+            "type": "DT",
+            "longName": "Identification Date"
+        }
+    },
+    "APR": {
+        "1": {
+            "type": "SCV",
+            "longName": "Time Selection Criteria"
+        },
+        "2": {
+            "type": "SCV",
+            "longName": "Resource Selection Criteria"
+        },
+        "3": {
+            "type": "SCV",
+            "longName": "Location Selection Criteria"
+        },
+        "4": {
+            "type": "NM",
+            "longName": "Slot Spacing Criteria"
+        },
+        "5": {
+            "type": "SCV",
+            "longName": "Filler Override Criteria"
+        }
+    },
+    "ARQ": {
+        "1": {
+            "type": "EI",
+            "longName": "Placer Appointment ID"
+        },
+        "2": {
+            "type": "EI",
+            "longName": "Filler Appointment ID"
+        },
+        "3": {
+            "type": "NM",
+            "longName": "Occurrence Number"
+        },
+        "4": {
+            "type": "EI",
+            "longName": "Placer Group Number"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Schedule ID"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Request Event Reason"
+        },
+        "7": {
+            "type": "CE_0276",
+            "longName": "Appointment Reason"
+        },
+        "8": {
+            "type": "CE_0277",
+            "longName": "Appointment Type"
+        },
+        "9": {
+            "type": "NM",
+            "longName": "Appointment Duration"
+        },
+        "10": {
+            "type": "CE",
+            "longName": "Appointment Duration Units"
+        },
+        "11": {
+            "type": "DR",
+            "longName": "Requested Start Date/Time Range"
+        },
+        "12": {
+            "type": "ST",
+            "longName": "Priority-ARQ"
+        },
+        "13": {
+            "type": "RI",
+            "longName": "Repeating Interval"
+        },
+        "14": {
+            "type": "ST",
+            "longName": "Repeating Interval Duration"
+        },
+        "15": {
+            "type": "XCN",
+            "longName": "Placer Contact Person"
+        },
+        "16": {
+            "type": "XTN",
+            "longName": "Placer Contact Phone Number"
+        },
+        "17": {
+            "type": "XAD",
+            "longName": "Placer Contact Address"
+        },
+        "18": {
+            "type": "PL",
+            "longName": "Placer Contact Location"
+        },
+        "19": {
+            "type": "XCN",
+            "longName": "Entered by Person"
+        },
+        "20": {
+            "type": "XTN",
+            "longName": "Entered by Phone Number"
+        },
+        "21": {
+            "type": "PL",
+            "longName": "Entered by Location"
+        },
+        "22": {
+            "type": "EI",
+            "longName": "Parent Placer Appointment ID"
+        },
+        "23": {
+            "type": "EI",
+            "longName": "Parent Filler Appointment ID"
+        }
+    },
+    "AUT": {
+        "1": {
+            "type": "CE_0072",
+            "longName": "Authorizing Payor, Plan ID"
+        },
+        "2": {
+            "type": "CE_0285",
+            "longName": "Authorizing Payor, Company ID"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Authorizing Payor, Company Name"
+        },
+        "4": {
+            "type": "TS",
+            "longName": "Authorization Effective Date"
+        },
+        "5": {
+            "type": "TS",
+            "longName": "Authorization Expiration Date"
+        },
+        "6": {
+            "type": "EI",
+            "longName": "Authorization Identifier"
+        },
+        "7": {
+            "type": "CP",
+            "longName": "Reimbursement Limit"
+        },
+        "8": {
+            "type": "NM",
+            "longName": "Requested Number of Treatments"
+        },
+        "9": {
+            "type": "NM",
+            "longName": "Authorized Number of Treatments"
+        },
+        "10": {
+            "type": "TS",
+            "longName": "Process Date"
+        }
+    },
+    "BHS": {
+        "1": {
+            "type": "ST",
+            "longName": "Batch Field Separator"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "Batch Encoding Characters"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Batch Sending Application"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "Batch Sending Facility"
+        },
+        "5": {
+            "type": "ST",
+            "longName": "Batch Receiving Application"
+        },
+        "6": {
+            "type": "ST",
+            "longName": "Batch Receiving Facility"
+        },
+        "7": {
+            "type": "TS",
+            "longName": "Batch Creation Date/Time"
+        },
+        "8": {
+            "type": "ST",
+            "longName": "Batch Security"
+        },
+        "9": {
+            "type": "ST",
+            "longName": "Batch Name/ID/Type"
+        },
+        "10": {
+            "type": "ST",
+            "longName": "Batch Comment"
+        },
+        "11": {
+            "type": "ST",
+            "longName": "Batch Control ID"
+        },
+        "12": {
+            "type": "ST",
+            "longName": "Reference Batch Control ID"
+        }
+    },
+    "BLG": {
+        "1": {
+            "type": "CCD",
+            "longName": "When to Charge"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Charge Type"
+        },
+        "3": {
+            "type": "CX",
+            "longName": "Account ID"
+        }
+    },
+    "BTS": {
+        "1": {
+            "type": "ST",
+            "longName": "Batch Message Count"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "Batch Comment"
+        },
+        "3": {
+            "type": "NM",
+            "longName": "Batch Totals"
+        }
+    },
+    "CDM": {
+        "1": {
+            "type": "CE_0132",
+            "longName": "Primary Key Value - CDM"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Charge Code Alias"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Charge Description Short"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "Charge Description Long"
+        },
+        "5": {
+            "type": "IS",
+            "longName": "Description Override Indicator"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Exploding Charges"
+        },
+        "7": {
+            "type": "CE_0088",
+            "longName": "Procedure Code"
+        },
+        "8": {
+            "type": "ID",
+            "longName": "Active/Inactive Flag"
+        },
+        "9": {
+            "type": "CE",
+            "longName": "Inventory Number"
+        },
+        "10": {
+            "type": "NM",
+            "longName": "Resource Load"
+        },
+        "11": {
+            "type": "CK",
+            "longName": "Contract Number"
+        },
+        "12": {
+            "type": "XON",
+            "longName": "Contract Organization"
+        },
+        "13": {
+            "type": "ID",
+            "longName": "Room Fee Indicator"
+        }
+    },
+    "CM0": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - CM0"
+        },
+        "2": {
+            "type": "EI",
+            "longName": "Sponsor Study ID"
+        },
+        "3": {
+            "type": "EI",
+            "longName": "Alternate Study ID"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "Title of Study"
+        },
+        "5": {
+            "type": "XCN",
+            "longName": "Chairman of Study"
+        },
+        "6": {
+            "type": "DT",
+            "longName": "Last IRB Approval Date"
+        },
+        "7": {
+            "type": "NM",
+            "longName": "Total Accrual to Date"
+        },
+        "8": {
+            "type": "DT",
+            "longName": "Last Accrual Date"
+        },
+        "9": {
+            "type": "XCN",
+            "longName": "Contact for Study"
+        },
+        "10": {
+            "type": "XTN",
+            "longName": "Contact's Tel. Number"
+        },
+        "11": {
+            "type": "XAD",
+            "longName": "Contact's Address"
+        }
+    },
+    "CM1": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - CM1"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Study Phase Identifier"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Description of Study Phase"
+        }
+    },
+    "CM2": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - CM2"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Scheduled Time Point"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Description of Time Point"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Events Scheduled This Time Point"
+        }
+    },
+    "CSP": {
+        "1": {
+            "type": "CE",
+            "longName": "Study Phase Identifier"
+        },
+        "2": {
+            "type": "TS",
+            "longName": "Date/time Study Phase Began"
+        },
+        "3": {
+            "type": "TS",
+            "longName": "Date/time Study Phase Ended"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Study Phase Evaluability"
+        }
+    },
+    "CSR": {
+        "1": {
+            "type": "EI",
+            "longName": "Sponsor Study ID"
+        },
+        "2": {
+            "type": "EI",
+            "longName": "Alternate Study ID"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Institution Registering the Patient"
+        },
+        "4": {
+            "type": "CX",
+            "longName": "Sponsor Patient ID"
+        },
+        "5": {
+            "type": "CX",
+            "longName": "Alternate Patient ID - CSR"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Date/Time Of Patient Study Registration"
+        },
+        "7": {
+            "type": "XCN",
+            "longName": "Person Performing Study Registration"
+        },
+        "8": {
+            "type": "XCN",
+            "longName": "Study Authorizing Provider"
+        },
+        "9": {
+            "type": "TS",
+            "longName": "Date/time Patient Study Consent Signed"
+        },
+        "10": {
+            "type": "CE",
+            "longName": "Patient Study Eligibility Status"
+        },
+        "11": {
+            "type": "TS",
+            "longName": "Study Randomization Date/time"
+        },
+        "12": {
+            "type": "CE",
+            "longName": "Randomized Study Arm"
+        },
+        "13": {
+            "type": "CE",
+            "longName": "Stratum for Study Randomization"
+        },
+        "14": {
+            "type": "CE",
+            "longName": "Patient Evaluability Status"
+        },
+        "15": {
+            "type": "TS",
+            "longName": "Date/time Ended Study"
+        },
+        "16": {
+            "type": "CE",
+            "longName": "Reason Ended Study"
+        }
+    },
+    "CSS": {
+        "1": {
+            "type": "CE",
+            "longName": "Study Scheduled Time Point"
+        },
+        "2": {
+            "type": "TS",
+            "longName": "Study Scheduled Patient Time Point"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Study Quality Control Codes"
+        }
+    },
+    "CTD": {
+        "2": {
+            "type": "XPN",
+            "longName": "Contact Name"
+        },
+        "4": {
+            "type": "PL",
+            "longName": "Contact Location"
+        },
+        "5": {
+            "type": "XTN",
+            "longName": "Contact Communication Information"
+        },
+        "7": {
+            "type": "PI",
+            "longName": "Contact Identifiers"
+        }
+    },
+    "CTI": {
+        "1": {
+            "type": "EI",
+            "longName": "Sponsor Study ID"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Study Phase Identifier"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Study Scheduled Time Point"
+        }
+    },
+    "DB1": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - DB1"
+        },
+        "2": {
+            "type": "IS",
+            "longName": "Disabled Person Code"
+        },
+        "3": {
+            "type": "CX",
+            "longName": "Disabled Person Identifier"
+        },
+        "4": {
+            "type": "ID",
+            "longName": "Disabled Indicator"
+        },
+        "5": {
+            "type": "DT",
+            "longName": "Disability Start Date"
+        },
+        "6": {
+            "type": "DT",
+            "longName": "Disability End Date"
+        },
+        "7": {
+            "type": "DT",
+            "longName": "Disability Return to Work Date"
+        },
+        "8": {
+            "type": "DT",
+            "longName": "Disability Unable to Work Date"
+        }
+    },
+    "DG1": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - DG1"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Diagnosis Coding Method"
+        },
+        "3": {
+            "type": "CE_0051",
+            "longName": "Diagnosis Code - DG1"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "Diagnosis Description"
+        },
+        "5": {
+            "type": "TS",
+            "longName": "Diagnosis Date/Time"
+        },
+        "6": {
+            "type": "IS",
+            "longName": "Diagnosis Type"
+        },
+        "7": {
+            "type": "CE_0118",
+            "longName": "Major Diagnostic Category"
+        },
+        "8": {
+            "type": "CE_0055",
+            "longName": "Diagnostic Related Group"
+        },
+        "9": {
+            "type": "ID",
+            "longName": "DRG Approval Indicator"
+        },
+        "10": {
+            "type": "IS",
+            "longName": "DRG Grouper Review Code"
+        },
+        "11": {
+            "type": "CE_0083",
+            "longName": "Outlier Type"
+        },
+        "12": {
+            "type": "NM",
+            "longName": "Outlier Days"
+        },
+        "13": {
+            "type": "CP",
+            "longName": "Outlier Cost"
+        },
+        "14": {
+            "type": "ST",
+            "longName": "Grouper Version And Type"
+        },
+        "15": {
+            "type": "ID",
+            "longName": "Diagnosis Priority"
+        },
+        "16": {
+            "type": "XCN",
+            "longName": "Diagnosing Clinician"
+        },
+        "17": {
+            "type": "IS",
+            "longName": "Diagnosis Classification"
+        },
+        "18": {
+            "type": "ID",
+            "longName": "Confidential Indicator"
+        },
+        "19": {
+            "type": "TS",
+            "longName": "Attestation Date/Time"
+        }
+    },
+    "DRG": {
+        "1": {
+            "type": "CE_0055",
+            "longName": "Diagnostic Related Group"
+        },
+        "2": {
+            "type": "TS",
+            "longName": "DRG Assigned Date/Time"
+        },
+        "3": {
+            "type": "ID",
+            "longName": "DRG Approval Indicator"
+        },
+        "4": {
+            "type": "IS",
+            "longName": "DRG Grouper Review Code"
+        },
+        "5": {
+            "type": "CE_0083",
+            "longName": "Outlier Type"
+        },
+        "6": {
+            "type": "NM",
+            "longName": "Outlier Days"
+        },
+        "7": {
+            "type": "CP",
+            "longName": "Outlier Cost"
+        },
+        "8": {
+            "type": "IS",
+            "longName": "DRG Payor"
+        },
+        "9": {
+            "type": "CP",
+            "longName": "Outlier Reimbursement"
+        },
+        "10": {
+            "type": "ID",
+            "longName": "Confidential Indicator"
+        }
+    },
+    "DSC": {
+        "1": {
+            "type": "ST",
+            "longName": "Continuation Pointer"
+        }
+    },
+    "DSP": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - DSP"
+        },
+        "2": {
+            "type": "SI",
+            "longName": "Display Level"
+        },
+        "3": {
+            "type": "TX",
+            "longName": "Data Line"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "Logical Break Point"
+        },
+        "5": {
+            "type": "TX",
+            "longName": "Result ID"
+        }
+    },
+    "EQL": {
+        "1": {
+            "type": "ST",
+            "longName": "Query Tag"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Query/ Response Format Code"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "EQL  Query Name"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "EQL  Query Statement"
+        }
+    },
+    "ERQ": {
+        "1": {
+            "type": "ST",
+            "longName": "Query Tag"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Event Identifier"
+        },
+        "3": {
+            "type": "QIP",
+            "longName": "Input Parameter List"
+        }
+    },
+    "ERR": {
+        "1": {
+            "type": "ELD",
+            "longName": "Error Code and Location"
+        }
+    },
+    "EVN": {
+        "1": {
+            "type": "ID",
+            "longName": "Event Type Code"
+        },
+        "2": {
+            "type": "TS",
+            "longName": "Recorded Date/Time"
+        },
+        "3": {
+            "type": "TS",
+            "longName": "Date/Time Planned Event"
+        },
+        "4": {
+            "type": "IS",
+            "longName": "Event Reason Code"
+        },
+        "5": {
+            "type": "XCN",
+            "longName": "Operator ID"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Event Occurred"
+        }
+    },
+    "FAC": {
+        "1": {
+            "type": "EI",
+            "longName": "Facility ID-FAC"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Facility Type"
+        },
+        "3": {
+            "type": "XAD",
+            "longName": "Facility Address"
+        },
+        "4": {
+            "type": "XTN",
+            "longName": "Facility Telecommunication"
+        },
+        "5": {
+            "type": "XCN",
+            "longName": "Contact Person"
+        },
+        "6": {
+            "type": "ST",
+            "longName": "Contact Title"
+        },
+        "7": {
+            "type": "XAD",
+            "longName": "Contact Address"
+        },
+        "8": {
+            "type": "XTN",
+            "longName": "Contact Telecommunication"
+        },
+        "9": {
+            "type": "XCN",
+            "longName": "Signature Authority"
+        },
+        "10": {
+            "type": "ST",
+            "longName": "Signature Authority Title"
+        },
+        "11": {
+            "type": "XAD",
+            "longName": "Signature Authority Address"
+        },
+        "12": {
+            "type": "XTN",
+            "longName": "Signature Authority Telecommunication"
+        }
+    },
+    "FHS": {
+        "1": {
+            "type": "ST",
+            "longName": "File Field Separator"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "File Encoding Characters"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "File Sending Application"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "File Sending Facility"
+        },
+        "5": {
+            "type": "ST",
+            "longName": "File Receiving Application"
+        },
+        "6": {
+            "type": "ST",
+            "longName": "File Receiving Facility"
+        },
+        "7": {
+            "type": "TS",
+            "longName": "File Creation Date/Time"
+        },
+        "8": {
+            "type": "ST",
+            "longName": "File Security"
+        },
+        "9": {
+            "type": "ST",
+            "longName": "File Name/ID"
+        },
+        "10": {
+            "type": "ST",
+            "longName": "File Header Comment"
+        },
+        "11": {
+            "type": "ST",
+            "longName": "File Control ID"
+        },
+        "12": {
+            "type": "ST",
+            "longName": "Reference File Control ID"
+        }
+    },
+    "FT1": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - FT1"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "Transaction ID"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Transaction Batch ID"
+        },
+        "4": {
+            "type": "TS",
+            "longName": "Transaction Date"
+        },
+        "5": {
+            "type": "TS",
+            "longName": "Transaction Posting Date"
+        },
+        "6": {
+            "type": "IS",
+            "longName": "Transaction Type"
+        },
+        "7": {
+            "type": "CE_0132",
+            "longName": "Transaction Code"
+        },
+        "8": {
+            "type": "ST",
+            "longName": "Transaction Description"
+        },
+        "9": {
+            "type": "ST",
+            "longName": "Transaction Description - Alt"
+        },
+        "10": {
+            "type": "NM",
+            "longName": "Transaction Quantity"
+        },
+        "11": {
+            "type": "CP",
+            "longName": "Transaction Amount - Extended"
+        },
+        "12": {
+            "type": "CP",
+            "longName": "Transaction Amount - Unit"
+        },
+        "13": {
+            "type": "CE_0049",
+            "longName": "Department Code"
+        },
+        "14": {
+            "type": "CE_0072",
+            "longName": "Insurance Plan ID"
+        },
+        "15": {
+            "type": "CP",
+            "longName": "Insurance Amount"
+        },
+        "16": {
+            "type": "PL",
+            "longName": "Assigned Patient Location"
+        },
+        "17": {
+            "type": "IS",
+            "longName": "Fee Schedule"
+        },
+        "18": {
+            "type": "IS",
+            "longName": "Patient Type"
+        },
+        "19": {
+            "type": "CE_0051",
+            "longName": "Diagnosis Code - FT1"
+        },
+        "20": {
+            "type": "XCN",
+            "longName": "Performed By Code"
+        },
+        "21": {
+            "type": "XCN",
+            "longName": "Ordered By Code"
+        },
+        "22": {
+            "type": "CP",
+            "longName": "Unit Cost"
+        },
+        "23": {
+            "type": "EI",
+            "longName": "Filler Order Number"
+        },
+        "24": {
+            "type": "XCN",
+            "longName": "Entered By Code"
+        },
+        "25": {
+            "type": "CE_0088",
+            "longName": "Procedure Code"
+        },
+        "26": {
+            "type": "CE_0340",
+            "longName": "Procedure Code Modifier"
+        }
+    },
+    "FTS": {
+        "1": {
+            "type": "NM",
+            "longName": "File Batch Count"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "File Trailer Comment"
+        }
+    },
+    "GOL": {
+        "1": {
+            "type": "ID",
+            "longName": "Action Code"
+        },
+        "2": {
+            "type": "TS",
+            "longName": "Action Date/Time"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Goal ID"
+        },
+        "4": {
+            "type": "EI",
+            "longName": "Goal Instance ID"
+        },
+        "5": {
+            "type": "EI",
+            "longName": "Episode of Care ID"
+        },
+        "6": {
+            "type": "NM",
+            "longName": "Goal List Priority"
+        },
+        "9": {
+            "type": "CE",
+            "longName": "Goal Classification"
+        },
+        "10": {
+            "type": "CE",
+            "longName": "Goal Management Discipline"
+        },
+        "11": {
+            "type": "CE",
+            "longName": "Current Goal Review Status"
+        },
+        "15": {
+            "type": "TQ",
+            "longName": "Goal Review Interval"
+        },
+        "16": {
+            "type": "CE",
+            "longName": "Goal Evaluation"
+        },
+        "17": {
+            "type": "ST",
+            "longName": "Goal Evaluation Comment"
+        },
+        "18": {
+            "type": "CE",
+            "longName": "Goal Life Cycle Status"
+        },
+        "20": {
+            "type": "CE",
+            "longName": "Goal Target Type"
+        },
+        "21": {
+            "type": "XPN",
+            "longName": "Goal Target Name"
+        }
+    },
+    "GT1": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - GT1"
+        },
+        "2": {
+            "type": "CX",
+            "longName": "Guarantor Number"
+        },
+        "3": {
+            "type": "XPN",
+            "longName": "Guarantor Name"
+        },
+        "4": {
+            "type": "XPN",
+            "longName": "Guarantor Spouse Name"
+        },
+        "5": {
+            "type": "XAD",
+            "longName": "Guarantor Address"
+        },
+        "6": {
+            "type": "XTN",
+            "longName": "Guarantor Ph Num-Home"
+        },
+        "7": {
+            "type": "XTN",
+            "longName": "Guarantor Ph Num-Business"
+        },
+        "8": {
+            "type": "TS",
+            "longName": "Guarantor Date/Time Of Birth"
+        },
+        "9": {
+            "type": "IS",
+            "longName": "Guarantor Sex"
+        },
+        "10": {
+            "type": "IS",
+            "longName": "Guarantor Type"
+        },
+        "11": {
+            "type": "CE_0063",
+            "longName": "Guarantor Relationship"
+        },
+        "12": {
+            "type": "ST",
+            "longName": "Guarantor SSN"
+        },
+        "13": {
+            "type": "DT",
+            "longName": "Guarantor Date - Begin"
+        },
+        "14": {
+            "type": "DT",
+            "longName": "Guarantor Date - End"
+        },
+        "15": {
+            "type": "NM",
+            "longName": "Guarantor Priority"
+        },
+        "16": {
+            "type": "XPN",
+            "longName": "Guarantor Employer Name"
+        },
+        "17": {
+            "type": "XAD",
+            "longName": "Guarantor Employer Address"
+        },
+        "18": {
+            "type": "XTN",
+            "longName": "Guarantor Employer Phone Number"
+        },
+        "19": {
+            "type": "CX",
+            "longName": "Guarantor Employee ID Number"
+        },
+        "20": {
+            "type": "IS",
+            "longName": "Guarantor Employment Status"
+        },
+        "21": {
+            "type": "XON",
+            "longName": "Guarantor Organization Name"
+        },
+        "22": {
+            "type": "ID",
+            "longName": "Guarantor Billing Hold Flag"
+        },
+        "23": {
+            "type": "CE_0341",
+            "longName": "Guarantor Credit Rating Code"
+        },
+        "24": {
+            "type": "TS",
+            "longName": "Guarantor Death Date And Time"
+        },
+        "25": {
+            "type": "ID",
+            "longName": "Guarantor Death Flag"
+        },
+        "26": {
+            "type": "CE_0218",
+            "longName": "Guarantor Charge Adjustment Code"
+        },
+        "27": {
+            "type": "CP",
+            "longName": "Guarantor Household Annual Income"
+        },
+        "28": {
+            "type": "NM",
+            "longName": "Guarantor Household Size"
+        },
+        "29": {
+            "type": "CX",
+            "longName": "Guarantor Employer ID Number"
+        },
+        "30": {
+            "type": "CE_0002",
+            "longName": "Guarantor Marital Status Code"
+        },
+        "31": {
+            "type": "DT",
+            "longName": "Guarantor Hire Effective Date"
+        },
+        "32": {
+            "type": "DT",
+            "longName": "Employment Stop Date"
+        },
+        "33": {
+            "type": "IS",
+            "longName": "Living Dependency"
+        },
+        "34": {
+            "type": "IS",
+            "longName": "Ambulatory Status"
+        },
+        "35": {
+            "type": "CE_0171",
+            "longName": "Citizenship"
+        },
+        "36": {
+            "type": "CE_0296",
+            "longName": "Primary Language"
+        },
+        "37": {
+            "type": "IS",
+            "longName": "Living Arrangement"
+        },
+        "38": {
+            "type": "CE_0215",
+            "longName": "Publicity Code"
+        },
+        "39": {
+            "type": "ID",
+            "longName": "Protection Indicator"
+        },
+        "40": {
+            "type": "IS",
+            "longName": "Student Indicator"
+        },
+        "41": {
+            "type": "CE_0006",
+            "longName": "Religion"
+        },
+        "42": {
+            "type": "XPN",
+            "longName": "Mother\u2019s Maiden Name"
+        },
+        "43": {
+            "type": "CE_0212",
+            "longName": "Nationality"
+        },
+        "44": {
+            "type": "CE_0189",
+            "longName": "Ethnic Group"
+        },
+        "45": {
+            "type": "XPN",
+            "longName": "Contact Person\u2019s Name"
+        },
+        "46": {
+            "type": "XTN",
+            "longName": "Contact Person\u2019s Telephone Number"
+        },
+        "47": {
+            "type": "CE_0222",
+            "longName": "Contact Reason"
+        },
+        "48": {
+            "type": "IS",
+            "longName": "Contact Relationship"
+        },
+        "49": {
+            "type": "ST",
+            "longName": "Job Title"
+        },
+        "50": {
+            "type": "JCC",
+            "longName": "Job Code/Class"
+        },
+        "51": {
+            "type": "XON",
+            "longName": "Guarantor Employer\u2019s Organization Name"
+        },
+        "52": {
+            "type": "IS",
+            "longName": "Handicap"
+        },
+        "53": {
+            "type": "IS",
+            "longName": "Job Status"
+        },
+        "54": {
+            "type": "FC",
+            "longName": "Guarantor Financial Class"
+        },
+        "55": {
+            "type": "CE_0005",
+            "longName": "Guarantor Race"
+        }
+    },
+    "IN1": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - IN1"
+        },
+        "2": {
+            "type": "CE_0072",
+            "longName": "Insurance Plan ID"
+        },
+        "3": {
+            "type": "CX",
+            "longName": "Insurance Company ID"
+        },
+        "4": {
+            "type": "XON",
+            "longName": "Insurance Company Name"
+        },
+        "5": {
+            "type": "XAD",
+            "longName": "Insurance Company Address"
+        },
+        "6": {
+            "type": "XPN",
+            "longName": "Insurance Co Contact Person"
+        },
+        "7": {
+            "type": "XTN",
+            "longName": "Insurance Co Phone Number"
+        },
+        "8": {
+            "type": "ST",
+            "longName": "Group Number"
+        },
+        "9": {
+            "type": "XON",
+            "longName": "Group Name"
+        },
+        "10": {
+            "type": "CX",
+            "longName": "Insured\u2019s Group Emp ID"
+        },
+        "11": {
+            "type": "XON",
+            "longName": "Insured\u2019s Group Emp Name"
+        },
+        "12": {
+            "type": "DT",
+            "longName": "Plan Effective Date"
+        },
+        "13": {
+            "type": "DT",
+            "longName": "Plan Expiration Date"
+        },
+        "14": {
+            "type": "AUI",
+            "longName": "Authorization Information"
+        },
+        "15": {
+            "type": "IS",
+            "longName": "Plan Type"
+        },
+        "16": {
+            "type": "XPN",
+            "longName": "Name Of Insured"
+        },
+        "17": {
+            "type": "CE_0063",
+            "longName": "Insured\u2019s Relationship To Patient"
+        },
+        "18": {
+            "type": "TS",
+            "longName": "Insured\u2019s Date Of Birth"
+        },
+        "19": {
+            "type": "XAD",
+            "longName": "Insured\u2019s Address"
+        },
+        "20": {
+            "type": "IS",
+            "longName": "Assignment Of Benefits"
+        },
+        "21": {
+            "type": "IS",
+            "longName": "Coordination Of Benefits"
+        },
+        "22": {
+            "type": "ST",
+            "longName": "Coord Of Ben. Priority"
+        },
+        "23": {
+            "type": "ID",
+            "longName": "Notice Of Admission Flag"
+        },
+        "24": {
+            "type": "DT",
+            "longName": "Notice Of Admission Date"
+        },
+        "25": {
+            "type": "ID",
+            "longName": "Report Of Eligibility Flag"
+        },
+        "26": {
+            "type": "DT",
+            "longName": "Report Of Eligibility Date"
+        },
+        "27": {
+            "type": "IS",
+            "longName": "Release Information Code"
+        },
+        "28": {
+            "type": "ST",
+            "longName": "Pre-Admit Cert (PAC)"
+        },
+        "29": {
+            "type": "TS",
+            "longName": "Verification Date/Time"
+        },
+        "30": {
+            "type": "XCN",
+            "longName": "Verification By"
+        },
+        "31": {
+            "type": "IS",
+            "longName": "Type Of Agreement Code"
+        },
+        "32": {
+            "type": "IS",
+            "longName": "Billing Status"
+        },
+        "33": {
+            "type": "NM",
+            "longName": "Lifetime Reserve Days"
+        },
+        "34": {
+            "type": "NM",
+            "longName": "Delay Before L.R. Day"
+        },
+        "35": {
+            "type": "IS",
+            "longName": "Company Plan Code"
+        },
+        "36": {
+            "type": "ST",
+            "longName": "Policy Number"
+        },
+        "37": {
+            "type": "CP",
+            "longName": "Policy Deductible"
+        },
+        "38": {
+            "type": "CP",
+            "longName": "Policy Limit - Amount"
+        },
+        "39": {
+            "type": "NM",
+            "longName": "Policy Limit - Days"
+        },
+        "40": {
+            "type": "CP",
+            "longName": "Room Rate - Semi-Private"
+        },
+        "41": {
+            "type": "CP",
+            "longName": "Room Rate - Private"
+        },
+        "42": {
+            "type": "CE_0066",
+            "longName": "Insured\u2019s Employment Status"
+        },
+        "43": {
+            "type": "IS",
+            "longName": "Insured\u2019s Sex"
+        },
+        "44": {
+            "type": "XAD",
+            "longName": "Insured\u2019s Employer\u2019s Address"
+        },
+        "45": {
+            "type": "ST",
+            "longName": "Verification Status"
+        },
+        "46": {
+            "type": "IS",
+            "longName": "Prior Insurance Plan ID"
+        },
+        "47": {
+            "type": "IS",
+            "longName": "Coverage Type"
+        },
+        "48": {
+            "type": "IS",
+            "longName": "Handicap"
+        },
+        "49": {
+            "type": "CX",
+            "longName": "Insured\u2019s ID Number"
+        }
+    },
+    "IN2": {
+        "1": {
+            "type": "CX",
+            "longName": "Insured\u2019s Employee ID"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "Insured\u2019s Social Security Number"
+        },
+        "3": {
+            "type": "XCN",
+            "longName": "Insured\u2019s Employer\u2019s Name and ID"
+        },
+        "4": {
+            "type": "IS",
+            "longName": "Employer Information Data"
+        },
+        "5": {
+            "type": "IS",
+            "longName": "Mail Claim Party"
+        },
+        "6": {
+            "type": "ST",
+            "longName": "Medicare Health Ins Card Number"
+        },
+        "7": {
+            "type": "XPN",
+            "longName": "Medicaid Case Name"
+        },
+        "8": {
+            "type": "ST",
+            "longName": "Medicaid Case Number"
+        },
+        "9": {
+            "type": "XPN",
+            "longName": "Military Sponsor Name"
+        },
+        "10": {
+            "type": "ST",
+            "longName": "Military ID Number"
+        },
+        "11": {
+            "type": "CE_0342",
+            "longName": "Dependent Of Military Recipient"
+        },
+        "12": {
+            "type": "ST",
+            "longName": "Military Organization"
+        },
+        "13": {
+            "type": "ST",
+            "longName": "Military Station"
+        },
+        "14": {
+            "type": "IS",
+            "longName": "Military Service"
+        },
+        "15": {
+            "type": "IS",
+            "longName": "Military Rank/Grade"
+        },
+        "16": {
+            "type": "IS",
+            "longName": "Military Status"
+        },
+        "17": {
+            "type": "DT",
+            "longName": "Military Retire Date"
+        },
+        "18": {
+            "type": "ID",
+            "longName": "Military Non-Avail Cert On File"
+        },
+        "19": {
+            "type": "ID",
+            "longName": "Baby Coverage"
+        },
+        "20": {
+            "type": "ID",
+            "longName": "Combine Baby Bill"
+        },
+        "21": {
+            "type": "ST",
+            "longName": "Blood Deductible"
+        },
+        "22": {
+            "type": "XPN",
+            "longName": "Special Coverage Approval Name"
+        },
+        "23": {
+            "type": "ST",
+            "longName": "Special Coverage Approval Title"
+        },
+        "24": {
+            "type": "IS",
+            "longName": "Non-Covered Insurance Code"
+        },
+        "25": {
+            "type": "CX",
+            "longName": "Payor ID"
+        },
+        "26": {
+            "type": "CX",
+            "longName": "Payor Subscriber ID"
+        },
+        "27": {
+            "type": "IS",
+            "longName": "Eligibility Source"
+        },
+        "28": {
+            "type": "RMC",
+            "longName": "Room Coverage Type/Amount"
+        },
+        "29": {
+            "type": "PTA",
+            "longName": "Policy Type/Amount"
+        },
+        "30": {
+            "type": "DDI",
+            "longName": "Daily Deductible"
+        },
+        "31": {
+            "type": "IS",
+            "longName": "Living Dependency"
+        },
+        "32": {
+            "type": "IS",
+            "longName": "Ambulatory Status"
+        },
+        "33": {
+            "type": "CE_0171",
+            "longName": "Citizenship"
+        },
+        "34": {
+            "type": "CE_0296",
+            "longName": "Primary Language"
+        },
+        "35": {
+            "type": "IS",
+            "longName": "Living Arrangement"
+        },
+        "36": {
+            "type": "CE_0215",
+            "longName": "Publicity Code"
+        },
+        "37": {
+            "type": "ID",
+            "longName": "Protection Indicator"
+        },
+        "38": {
+            "type": "IS",
+            "longName": "Student Indicator"
+        },
+        "39": {
+            "type": "CE_0006",
+            "longName": "Religion"
+        },
+        "40": {
+            "type": "XPN",
+            "longName": "Mother\u2019s Maiden Name"
+        },
+        "41": {
+            "type": "CE_0212",
+            "longName": "Nationality"
+        },
+        "42": {
+            "type": "CE_0189",
+            "longName": "Ethnic Group"
+        },
+        "43": {
+            "type": "CE_0002",
+            "longName": "Marital Status"
+        },
+        "44": {
+            "type": "DT",
+            "longName": "Insured\u2019s Employment Start Date"
+        },
+        "45": {
+            "type": "DT",
+            "longName": "Employment Stop Date"
+        },
+        "46": {
+            "type": "ST",
+            "longName": "Job Title"
+        },
+        "47": {
+            "type": "JCC",
+            "longName": "Job Code/Class"
+        },
+        "48": {
+            "type": "IS",
+            "longName": "Job Status"
+        },
+        "49": {
+            "type": "XPN",
+            "longName": "Employer Contact Person Name"
+        },
+        "50": {
+            "type": "XTN",
+            "longName": "Employer Contact Person Phone Number"
+        },
+        "51": {
+            "type": "IS",
+            "longName": "Employer Contact Reason"
+        },
+        "52": {
+            "type": "XPN",
+            "longName": "Insured\u2019s Contact Person\u2019s Name"
+        },
+        "53": {
+            "type": "XTN",
+            "longName": "Insured\u2019s Contact Person Phone Number"
+        },
+        "54": {
+            "type": "IS",
+            "longName": "Insured\u2019s Contact Person Reason"
+        },
+        "55": {
+            "type": "DT",
+            "longName": "Relationship To The Patient Start Date"
+        },
+        "56": {
+            "type": "DT",
+            "longName": "Relationship To The Patient Stop Date"
+        },
+        "57": {
+            "type": "IS",
+            "longName": "Insurance Co. Contact Reason"
+        },
+        "58": {
+            "type": "XTN",
+            "longName": "Insurance Co Contact Phone Number"
+        },
+        "59": {
+            "type": "IS",
+            "longName": "Policy Scope"
+        },
+        "60": {
+            "type": "IS",
+            "longName": "Policy Source"
+        },
+        "61": {
+            "type": "CX",
+            "longName": "Patient Member Number"
+        },
+        "62": {
+            "type": "CE_0063",
+            "longName": "Guarantor\u2019s Relationship To Insured"
+        },
+        "63": {
+            "type": "XTN",
+            "longName": "Insured\u2019s Phone Number - Home"
+        },
+        "64": {
+            "type": "XTN",
+            "longName": "Insured\u2019s Employer Phone Number"
+        },
+        "65": {
+            "type": "CE_0343",
+            "longName": "Military Handicapped Program"
+        },
+        "66": {
+            "type": "ID",
+            "longName": "Suspend Flag"
+        },
+        "67": {
+            "type": "ID",
+            "longName": "Copay Limit Flag"
+        },
+        "68": {
+            "type": "ID",
+            "longName": "Stoploss Limit Flag"
+        },
+        "69": {
+            "type": "XON",
+            "longName": "Insured Organization Name And ID"
+        },
+        "70": {
+            "type": "XON",
+            "longName": "Insured Employer Organization Name And ID"
+        },
+        "71": {
+            "type": "CE_0005",
+            "longName": "Race"
+        },
+        "72": {
+            "type": "CE_0344",
+            "longName": "HCFA Patient\u2019s Relationship to Insured"
+        }
+    },
+    "IN3": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - IN3"
+        },
+        "2": {
+            "type": "CX",
+            "longName": "Certification Number"
+        },
+        "3": {
+            "type": "XCN",
+            "longName": "Certified By"
+        },
+        "4": {
+            "type": "ID",
+            "longName": "Certification Required"
+        },
+        "5": {
+            "type": "MOP",
+            "longName": "Penalty"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Certification Date/Time"
+        },
+        "7": {
+            "type": "TS",
+            "longName": "Certification Modify Date/Time"
+        },
+        "8": {
+            "type": "XCN",
+            "longName": "Operator"
+        },
+        "9": {
+            "type": "DT",
+            "longName": "Certification Begin Date"
+        },
+        "10": {
+            "type": "DT",
+            "longName": "Certification End Date"
+        },
+        "11": {
+            "type": "DTN",
+            "longName": "Days"
+        },
+        "12": {
+            "type": "CE_0233",
+            "longName": "Non-Concur Code/Description"
+        },
+        "13": {
+            "type": "TS",
+            "longName": "Non-Concur Effective Date/Time"
+        },
+        "14": {
+            "type": "XCN",
+            "longName": "Physician Reviewer"
+        },
+        "15": {
+            "type": "ST",
+            "longName": "Certification Contact"
+        },
+        "16": {
+            "type": "XTN",
+            "longName": "Certification Contact Phone Number"
+        },
+        "17": {
+            "type": "CE_0345",
+            "longName": "Appeal Reason"
+        },
+        "18": {
+            "type": "CE_0346",
+            "longName": "Certification Agency"
+        },
+        "19": {
+            "type": "XTN",
+            "longName": "Certification Agency Phone Number"
+        },
+        "20": {
+            "type": "PCF",
+            "longName": "Pre-Certification Req/Window"
+        },
+        "21": {
+            "type": "ST",
+            "longName": "Case Manager"
+        },
+        "22": {
+            "type": "DT",
+            "longName": "Second Opinion Date"
+        },
+        "23": {
+            "type": "IS",
+            "longName": "Second Opinion Status"
+        },
+        "24": {
+            "type": "IS",
+            "longName": "Second Opinion Documentation Received"
+        },
+        "25": {
+            "type": "XCN",
+            "longName": "Second Opinion Physician"
+        }
+    },
+    "LCC": {
+        "1": {
+            "type": "PL",
+            "longName": "Primary Key Value - LCC"
+        },
+        "2": {
+            "type": "IS",
+            "longName": "Location Department"
+        },
+        "3": {
+            "type": "CE_0129",
+            "longName": "Accommodation Type"
+        },
+        "4": {
+            "type": "CE_0132",
+            "longName": "Charge Code"
+        }
+    },
+    "LCH": {
+        "1": {
+            "type": "PL",
+            "longName": "Primary Key Value - LCH"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Segment Action Code"
+        },
+        "3": {
+            "type": "EI",
+            "longName": "Segment Unique Key"
+        },
+        "4": {
+            "type": "CE_0324",
+            "longName": "Location Characteristic ID"
+        },
+        "5": {
+            "type": "CE_0136_0262_0263",
+            "longName": "Location Characteristic Value"
+        }
+    },
+    "LDP": {
+        "1": {
+            "type": "PL",
+            "longName": "Primary Key Value - LDP"
+        },
+        "2": {
+            "type": "IS",
+            "longName": "Location Department"
+        },
+        "3": {
+            "type": "IS",
+            "longName": "Location Service"
+        },
+        "4": {
+            "type": "CE_0265",
+            "longName": "Specialty Type"
+        },
+        "5": {
+            "type": "IS",
+            "longName": "Valid Patient Classes"
+        },
+        "6": {
+            "type": "ID",
+            "longName": "Active/Inactive Flag"
+        },
+        "7": {
+            "type": "TS",
+            "longName": "Activation Date  LDP"
+        },
+        "8": {
+            "type": "TS",
+            "longName": "Inactivation Date - LDP"
+        },
+        "9": {
+            "type": "ST",
+            "longName": "Inactivated Reason"
+        },
+        "10": {
+            "type": "VH",
+            "longName": "Visiting Hours"
+        },
+        "11": {
+            "type": "XTN",
+            "longName": "Contact Phone"
+        }
+    },
+    "LOC": {
+        "1": {
+            "type": "PL",
+            "longName": "Primary Key Value - LOC"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "Location Description"
+        },
+        "3": {
+            "type": "IS",
+            "longName": "Location Type - LOC"
+        },
+        "4": {
+            "type": "XON",
+            "longName": "Organization Name - LOC"
+        },
+        "5": {
+            "type": "XAD",
+            "longName": "Location Address"
+        },
+        "6": {
+            "type": "XTN",
+            "longName": "Location Phone"
+        },
+        "7": {
+            "type": "CE",
+            "longName": "License Number"
+        },
+        "8": {
+            "type": "IS",
+            "longName": "Location Equipment"
+        }
+    },
+    "LRL": {
+        "1": {
+            "type": "PL",
+            "longName": "Primary Key Value - LRL"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Segment Action Code"
+        },
+        "3": {
+            "type": "EI",
+            "longName": "Segment Unique Key"
+        },
+        "4": {
+            "type": "CE_0325",
+            "longName": "Location Relationship ID"
+        },
+        "5": {
+            "type": "XON",
+            "longName": "Organizational Location Relationship Value"
+        },
+        "6": {
+            "type": "PL",
+            "longName": "Patient Location Relationship Value"
+        }
+    },
+    "MFA": {
+        "1": {
+            "type": "ID",
+            "longName": "Record-Level Event Code"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "MFN Control ID"
+        },
+        "3": {
+            "type": "TS",
+            "longName": "Event Completion Date/Time"
+        },
+        "4": {
+            "type": "CE_0181",
+            "longName": "MFN Record Level Error Return"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Primary Key Value \u2013 MFA"
+        },
+        "6": {
+            "type": "ID",
+            "longName": "Primary Key Value Type - MFA"
+        }
+    },
+    "MFE": {
+        "1": {
+            "type": "ID",
+            "longName": "Record-Level Event Code"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "MFN Control ID"
+        },
+        "3": {
+            "type": "TS",
+            "longName": "Effective Date/Time"
+        },
+        "4": {
+            "type": "varies",
+            "longName": "Primary Key Value - MFE"
+        },
+        "5": {
+            "type": "ID",
+            "longName": "Primary Key Value Type"
+        }
+    },
+    "MFI": {
+        "1": {
+            "type": "CE_0175",
+            "longName": "Master File Identifier"
+        },
+        "2": {
+            "type": "HD",
+            "longName": "Master File Application Identifier"
+        },
+        "3": {
+            "type": "ID",
+            "longName": "File-Level Event Code"
+        },
+        "4": {
+            "type": "TS",
+            "longName": "Entered Date/Time"
+        },
+        "5": {
+            "type": "TS",
+            "longName": "Effective Date/Time"
+        },
+        "6": {
+            "type": "ID",
+            "longName": "Response Level Code"
+        }
+    },
+    "MRG": {
+        "1": {
+            "type": "CX",
+            "longName": "Prior Patient Identifier List"
+        },
+        "2": {
+            "type": "CX",
+            "longName": "Prior Alternate Patient ID"
+        },
+        "3": {
+            "type": "CX",
+            "longName": "Prior Patient Account Number"
+        },
+        "4": {
+            "type": "CX",
+            "longName": "Prior Patient ID"
+        },
+        "5": {
+            "type": "CX",
+            "longName": "Prior Visit Number"
+        },
+        "6": {
+            "type": "CX",
+            "longName": "Prior Alternate Visit ID"
+        },
+        "7": {
+            "type": "XPN",
+            "longName": "Prior Patient Name"
+        }
+    },
+    "MSA": {
+        "1": {
+            "type": "ID",
+            "longName": "Acknowledgement Code"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "Message Control ID"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Text Message"
+        },
+        "4": {
+            "type": "NM",
+            "longName": "Expected Sequence Number"
+        },
+        "5": {
+            "type": "ID",
+            "longName": "Delayed Acknowledgment Type"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Error Condition"
+        }
+    },
+    "MSH": {
+        "1": {
+            "type": "ST",
+            "longName": "Field Separator"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "Encoding Characters"
+        },
+        "3": {
+            "type": "HD",
+            "longName": "Sending Application"
+        },
+        "4": {
+            "type": "HD",
+            "longName": "Sending Facility"
+        },
+        "5": {
+            "type": "HD",
+            "longName": "Receiving Application"
+        },
+        "6": {
+            "type": "HD",
+            "longName": "Receiving Facility"
+        },
+        "7": {
+            "type": "TS",
+            "longName": "Date/Time Of Message"
+        },
+        "8": {
+            "type": "ST",
+            "longName": "Security"
+        },
+        "9": {
+            "type": "MSG",
+            "longName": "Message Type"
+        },
+        "10": {
+            "type": "ST",
+            "longName": "Message Control ID"
+        },
+        "11": {
+            "type": "PT",
+            "longName": "Processing ID"
+        },
+        "12": {
+            "type": "VID",
+            "longName": "Version ID"
+        },
+        "13": {
+            "type": "NM",
+            "longName": "Sequence Number"
+        },
+        "14": {
+            "type": "ST",
+            "longName": "Continuation Pointer"
+        },
+        "15": {
+            "type": "ID",
+            "longName": "Accept Acknowledgment Type"
+        },
+        "16": {
+            "type": "ID",
+            "longName": "Application Acknowledgment Type"
+        },
+        "17": {
+            "type": "ID",
+            "longName": "Country Code"
+        },
+        "18": {
+            "type": "ID",
+            "longName": "Character Set"
+        },
+        "19": {
+            "type": "CE",
+            "longName": "Principal Language Of Message"
+        },
+        "20": {
+            "type": "ID",
+            "longName": "Alternate Character Set Handling Scheme"
+        }
+    },
+    "NK1": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - NK1"
+        },
+        "2": {
+            "type": "XPN",
+            "longName": "Name"
+        },
+        "3": {
+            "type": "CE_0063",
+            "longName": "Relationship"
+        },
+        "4": {
+            "type": "XAD",
+            "longName": "Address"
+        },
+        "5": {
+            "type": "XTN",
+            "longName": "Phone Number"
+        },
+        "6": {
+            "type": "XTN",
+            "longName": "Business Phone Number"
+        },
+        "7": {
+            "type": "CE_0131",
+            "longName": "Contact Role"
+        },
+        "8": {
+            "type": "DT",
+            "longName": "Start Date"
+        },
+        "9": {
+            "type": "DT",
+            "longName": "End Date"
+        },
+        "10": {
+            "type": "ST",
+            "longName": "Next of Kin / Associated Parties Job Title"
+        },
+        "11": {
+            "type": "JCC",
+            "longName": "Next of Kin / Associated Parties Job Code/Class"
+        },
+        "12": {
+            "type": "CX",
+            "longName": "Next of Kin / Associated Parties Employee Number"
+        },
+        "13": {
+            "type": "XON",
+            "longName": "Organization Name - NK1"
+        },
+        "14": {
+            "type": "CE_0002",
+            "longName": "Marital Status"
+        },
+        "15": {
+            "type": "IS",
+            "longName": "Sex"
+        },
+        "16": {
+            "type": "TS",
+            "longName": "Date/Time Of Birth"
+        },
+        "17": {
+            "type": "IS",
+            "longName": "Living Dependency"
+        },
+        "18": {
+            "type": "IS",
+            "longName": "Ambulatory Status"
+        },
+        "19": {
+            "type": "CE_0171",
+            "longName": "Citizenship"
+        },
+        "20": {
+            "type": "CE_0296",
+            "longName": "Primary Language"
+        },
+        "21": {
+            "type": "IS",
+            "longName": "Living Arrangement"
+        },
+        "22": {
+            "type": "CE_0215",
+            "longName": "Publicity Code"
+        },
+        "23": {
+            "type": "ID",
+            "longName": "Protection Indicator"
+        },
+        "24": {
+            "type": "IS",
+            "longName": "Student Indicator"
+        },
+        "25": {
+            "type": "CE_0006",
+            "longName": "Religion"
+        },
+        "26": {
+            "type": "XPN",
+            "longName": "Mother\u2019s Maiden Name"
+        },
+        "27": {
+            "type": "CE_0212",
+            "longName": "Nationality"
+        },
+        "28": {
+            "type": "CE_0189",
+            "longName": "Ethnic Group"
+        },
+        "29": {
+            "type": "CE_0222",
+            "longName": "Contact Reason"
+        },
+        "30": {
+            "type": "XPN",
+            "longName": "Contact Person\u2019s Name"
+        },
+        "31": {
+            "type": "XTN",
+            "longName": "Contact Person\u2019s Telephone Number"
+        },
+        "32": {
+            "type": "XAD",
+            "longName": "Contact Person\u2019s Address"
+        },
+        "33": {
+            "type": "CX",
+            "longName": "Next of Kin/Associated Party\u2019s Identifiers"
+        },
+        "34": {
+            "type": "IS",
+            "longName": "Job Status"
+        },
+        "35": {
+            "type": "CE_0005",
+            "longName": "Race"
+        },
+        "36": {
+            "type": "IS",
+            "longName": "Handicap"
+        },
+        "37": {
+            "type": "ST",
+            "longName": "Contact Person Social Security Number"
+        }
+    },
+    "NPU": {
+        "1": {
+            "type": "PL",
+            "longName": "Bed Location"
+        },
+        "2": {
+            "type": "IS",
+            "longName": "Bed Status"
+        }
+    },
+    "NTE": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - NTE"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Source of Comment"
+        },
+        "3": {
+            "type": "FT",
+            "longName": "Comment"
+        },
+        "4": {
+            "type": "CE_0364",
+            "longName": "Comment Type"
+        }
+    },
+    "OBR": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - OBR"
+        },
+        "2": {
+            "type": "EI",
+            "longName": "Placer Order Number"
+        },
+        "3": {
+            "type": "EI",
+            "longName": "Filler Order Number"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Universal Service ID"
+        },
+        "5": {
+            "type": "ID",
+            "longName": "Priority-OBR"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Requested Date/time"
+        },
+        "7": {
+            "type": "TS",
+            "longName": "Observation Date/Time #"
+        },
+        "8": {
+            "type": "TS",
+            "longName": "Observation End Date/Time #"
+        },
+        "9": {
+            "type": "CQ",
+            "longName": "Collection Volume *"
+        },
+        "10": {
+            "type": "XCN",
+            "longName": "Collector Identifier *"
+        },
+        "11": {
+            "type": "ID",
+            "longName": "Specimen Action Code *"
+        },
+        "12": {
+            "type": "CE",
+            "longName": "Danger Code"
+        },
+        "13": {
+            "type": "ST",
+            "longName": "Relevant Clinical Info."
+        },
+        "14": {
+            "type": "TS",
+            "longName": "Specimen Received Date/Time *"
+        },
+        "15": {
+            "type": "SPS",
+            "longName": "Specimen Source"
+        },
+        "16": {
+            "type": "XCN",
+            "longName": "Ordering Provider"
+        },
+        "17": {
+            "type": "XTN",
+            "longName": "Order Callback Phone Number"
+        },
+        "18": {
+            "type": "ST",
+            "longName": "Placer Field 1"
+        },
+        "19": {
+            "type": "ST",
+            "longName": "Placer Field 2"
+        },
+        "20": {
+            "type": "ST",
+            "longName": "Filler Field 1 +"
+        },
+        "21": {
+            "type": "ST",
+            "longName": "Filler Field 2 +"
+        },
+        "22": {
+            "type": "TS",
+            "longName": "Results Rpt/Status Chng - Date/Time +"
+        },
+        "23": {
+            "type": "MOC",
+            "longName": "Charge to Practice +"
+        },
+        "24": {
+            "type": "ID",
+            "longName": "Diagnostic Serv Sect ID"
+        },
+        "25": {
+            "type": "ID",
+            "longName": "Result Status +"
+        },
+        "26": {
+            "type": "PRL",
+            "longName": "Parent Result +"
+        },
+        "27": {
+            "type": "TQ",
+            "longName": "Quantity/Timing"
+        },
+        "28": {
+            "type": "XCN",
+            "longName": "Result Copies To"
+        },
+        "29": {
+            "type": "EIP",
+            "longName": "Parent"
+        },
+        "30": {
+            "type": "ID",
+            "longName": "Transportation Mode"
+        },
+        "31": {
+            "type": "CE",
+            "longName": "Reason for Study"
+        },
+        "32": {
+            "type": "NDL",
+            "longName": "Principal Result Interpreter +"
+        },
+        "33": {
+            "type": "NDL",
+            "longName": "Assistant Result Interpreter +"
+        },
+        "34": {
+            "type": "NDL",
+            "longName": "Technician +"
+        },
+        "35": {
+            "type": "NDL",
+            "longName": "Transcriptionist +"
+        },
+        "36": {
+            "type": "TS",
+            "longName": "Scheduled Date/Time +"
+        },
+        "37": {
+            "type": "NM",
+            "longName": "Number of Sample Containers *"
+        },
+        "38": {
+            "type": "CE",
+            "longName": "Transport Logistics of Collected Sample *"
+        },
+        "39": {
+            "type": "CE",
+            "longName": "Collector\u2019s Comment *"
+        },
+        "40": {
+            "type": "CE",
+            "longName": "Transport Arrangement Responsibility"
+        },
+        "41": {
+            "type": "ID",
+            "longName": "Transport Arranged"
+        },
+        "42": {
+            "type": "ID",
+            "longName": "Escort Required"
+        },
+        "43": {
+            "type": "CE",
+            "longName": "Planned Patient Transport Comment"
+        },
+        "44": {
+            "type": "CE_0088",
+            "longName": "Procedure Code"
+        },
+        "45": {
+            "type": "CE_0340",
+            "longName": "Procedure Code Modifier"
+        }
+    },
+    "OBX": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - OBX"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Value Type"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Observation Identifier"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "Observation Sub-ID"
+        },
+        "5": {
+            "type": "varies",
+            "longName": "Observation Value"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Units"
+        },
+        "7": {
+            "type": "ST",
+            "longName": "References Range"
+        },
+        "8": {
+            "type": "ID",
+            "longName": "Abnormal Flags"
+        },
+        "9": {
+            "type": "NM",
+            "longName": "Probability"
+        },
+        "10": {
+            "type": "ID",
+            "longName": "Nature of Abnormal Test"
+        },
+        "11": {
+            "type": "ID",
+            "longName": "Observation Result Status"
+        },
+        "12": {
+            "type": "TS",
+            "longName": "Date Last Obs Normal Values"
+        },
+        "13": {
+            "type": "ST",
+            "longName": "User Defined Access Checks"
+        },
+        "14": {
+            "type": "TS",
+            "longName": "Date/Time of the Observation"
+        },
+        "15": {
+            "type": "CE",
+            "longName": "Producer's ID"
+        },
+        "16": {
+            "type": "XCN",
+            "longName": "Responsible Observer"
+        },
+        "17": {
+            "type": "CE",
+            "longName": "Observation Method"
+        }
+    },
+    "ODS": {
+        "1": {
+            "type": "ID",
+            "longName": "Type"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Service Period"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Diet, Supplement, or Preference Code"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "Text Instruction"
+        }
+    },
+    "ODT": {
+        "1": {
+            "type": "CE_0160",
+            "longName": "Tray Type"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Service Period"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Text Instruction"
+        }
+    },
+    "OM1": {
+        "1": {
+            "type": "NM",
+            "longName": "Sequence Number - Test/Observation Master File"
+        },
+        "10": {
+            "type": "ST",
+            "longName": "Preferred Short Name or Mnemonic for Observation"
+        },
+        "12": {
+            "type": "ID",
+            "longName": "Orderability"
+        },
+        "13": {
+            "type": "CE",
+            "longName": "Identity of Instrument Used to Perform this Study"
+        },
+        "14": {
+            "type": "CE",
+            "longName": "Coded Representation of Method"
+        },
+        "15": {
+            "type": "ID",
+            "longName": "Portable"
+        },
+        "16": {
+            "type": "CE",
+            "longName": "Observation Producing Department/Section"
+        },
+        "17": {
+            "type": "XTN",
+            "longName": "Telephone Number of Section"
+        },
+        "18": {
+            "type": "IS",
+            "longName": "Nature of Test/Observation"
+        },
+        "19": {
+            "type": "CE",
+            "longName": "Report Subheader"
+        },
+        "20": {
+            "type": "ST",
+            "longName": "Report Display Order"
+        },
+        "21": {
+            "type": "TS",
+            "longName": "Date/Time Stamp for any change in Definition for the Observation"
+        },
+        "22": {
+            "type": "TS",
+            "longName": "Effective Date/Time of Change"
+        },
+        "23": {
+            "type": "NM",
+            "longName": "Typical Turn-Around Time"
+        },
+        "24": {
+            "type": "NM",
+            "longName": "Processing Time"
+        },
+        "25": {
+            "type": "ID",
+            "longName": "Processing Priority"
+        },
+        "26": {
+            "type": "ID",
+            "longName": "Reporting Priority"
+        },
+        "27": {
+            "type": "CE",
+            "longName": "Outside Site(s) Where Observation may be Performed"
+        },
+        "28": {
+            "type": "XAD",
+            "longName": "Address of Outside Site(s)"
+        },
+        "29": {
+            "type": "XTN",
+            "longName": "Phone Number of Outside Site"
+        },
+        "30": {
+            "type": "IS",
+            "longName": "Confidentiality Code"
+        },
+        "31": {
+            "type": "CE",
+            "longName": "Observations Required to Interpret the Obs"
+        },
+        "32": {
+            "type": "TX",
+            "longName": "Interpretation of Observations"
+        },
+        "33": {
+            "type": "CE",
+            "longName": "Contraindications to Observations"
+        },
+        "34": {
+            "type": "CE",
+            "longName": "Reflex Tests/Observations"
+        },
+        "35": {
+            "type": "TX",
+            "longName": "Rules that Trigger Reflex Testing"
+        },
+        "36": {
+            "type": "CE",
+            "longName": "Fixed Canned Message"
+        },
+        "37": {
+            "type": "TX",
+            "longName": "Patient Preparation"
+        },
+        "38": {
+            "type": "CE",
+            "longName": "Procedure Medication"
+        },
+        "39": {
+            "type": "TX",
+            "longName": "Factors that may Effect the Observation"
+        },
+        "40": {
+            "type": "ST",
+            "longName": "Test/Observation Performance Schedule"
+        },
+        "41": {
+            "type": "TX",
+            "longName": "Description of Test Methods"
+        },
+        "42": {
+            "type": "CE_0254",
+            "longName": "Kind of Quantity Observed"
+        },
+        "43": {
+            "type": "CE_0255",
+            "longName": "Point Versus Interval"
+        },
+        "44": {
+            "type": "TX_CHALLENGE",
+            "longName": "Challenge Information"
+        },
+        "45": {
+            "type": "CE_0258",
+            "longName": "Relationship Modifier"
+        },
+        "46": {
+            "type": "CE",
+            "longName": "Target Anatomic Site Of Test"
+        },
+        "47": {
+            "type": "CE_0259",
+            "longName": "Modality Of Imaging Measurement"
+        }
+    },
+    "OM3": {
+        "5": {
+            "type": "CE",
+            "longName": "Abnormal Text/Codes for Categorical Observations"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Critical Text Codes for Categorical Observations"
+        },
+        "7": {
+            "type": "ID",
+            "longName": "Value Type"
+        }
+    },
+    "OM5": {
+        "2": {
+            "type": "CE",
+            "longName": "Test/Observations Included within an Ordered Test Battery"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Observation ID Suffixes"
+        }
+    },
+    "ORC": {
+        "20": {
+            "type": "CE_0339",
+            "longName": "Advanced Beneficiary Notice Code"
+        },
+        "21": {
+            "type": "XON",
+            "longName": "Ordering Facility Name"
+        },
+        "22": {
+            "type": "XAD",
+            "longName": "Ordering Facility Address"
+        },
+        "23": {
+            "type": "XTN",
+            "longName": "Ordering Facility Phone Number"
+        },
+        "24": {
+            "type": "XAD",
+            "longName": "Ordering Provider Address"
+        }
+    },
+    "PCR": {
+        "1": {
+            "type": "CE",
+            "longName": "Implicated Product"
+        },
+        "2": {
+            "type": "IS",
+            "longName": "Generic Product"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Product Class"
+        },
+        "4": {
+            "type": "CQ",
+            "longName": "Total Duration Of Therapy"
+        },
+        "5": {
+            "type": "TS",
+            "longName": "Product Manufacture Date"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Product Expiration Date"
+        },
+        "7": {
+            "type": "TS",
+            "longName": "Product Implantation Date"
+        },
+        "8": {
+            "type": "TS",
+            "longName": "Product Explantation Date"
+        },
+        "9": {
+            "type": "IS",
+            "longName": "Single Use Device"
+        },
+        "10": {
+            "type": "CE",
+            "longName": "Indication For Product Use"
+        },
+        "11": {
+            "type": "IS",
+            "longName": "Product Problem"
+        },
+        "12": {
+            "type": "ST",
+            "longName": "Product Serial/Lot Number"
+        },
+        "13": {
+            "type": "IS",
+            "longName": "Product Available For Inspection"
+        },
+        "14": {
+            "type": "CE",
+            "longName": "Product Evaluation Performed"
+        },
+        "15": {
+            "type": "CE_0247",
+            "longName": "Product Evaluation Status"
+        },
+        "16": {
+            "type": "CE",
+            "longName": "Product Evaluation Results"
+        },
+        "17": {
+            "type": "ID",
+            "longName": "Evaluated Product Source"
+        },
+        "18": {
+            "type": "TS",
+            "longName": "Date Product Returned To Manufacturer"
+        },
+        "19": {
+            "type": "ID",
+            "longName": "Device Operator Qualifications"
+        },
+        "20": {
+            "type": "ID",
+            "longName": "Relatedness Assessment"
+        },
+        "21": {
+            "type": "ID",
+            "longName": "Action Taken In Response To The Event"
+        },
+        "22": {
+            "type": "ID",
+            "longName": "Event Causality Observations"
+        },
+        "23": {
+            "type": "ID",
+            "longName": "Indirect Exposure Mechanism"
+        }
+    },
+    "PD1": {
+        "1": {
+            "type": "IS",
+            "longName": "Living Dependency"
+        },
+        "2": {
+            "type": "IS",
+            "longName": "Living Arrangement"
+        },
+        "3": {
+            "type": "XON",
+            "longName": "Patient Primary Facility"
+        },
+        "4": {
+            "type": "XCN",
+            "longName": "Patient Primary Care Provider Name & ID No."
+        },
+        "5": {
+            "type": "IS",
+            "longName": "Student Indicator"
+        },
+        "6": {
+            "type": "IS",
+            "longName": "Handicap"
+        },
+        "7": {
+            "type": "IS",
+            "longName": "Living Will"
+        },
+        "8": {
+            "type": "IS",
+            "longName": "Organ Donor"
+        },
+        "9": {
+            "type": "ID",
+            "longName": "Separate Bill"
+        },
+        "10": {
+            "type": "CX",
+            "longName": "Duplicate Patient"
+        },
+        "11": {
+            "type": "CE_0215",
+            "longName": "Publicity Code"
+        },
+        "12": {
+            "type": "ID",
+            "longName": "Protection Indicator"
+        }
+    },
+    "PDC": {
+        "1": {
+            "type": "XON",
+            "longName": "Manufacturer/Distributor"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Country"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Brand Name"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "Device Family Name"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Generic Name"
+        },
+        "6": {
+            "type": "ST",
+            "longName": "Model Identifier"
+        },
+        "7": {
+            "type": "ST",
+            "longName": "Catalogue Identifier"
+        },
+        "8": {
+            "type": "ST",
+            "longName": "Other Identifier"
+        },
+        "9": {
+            "type": "CE",
+            "longName": "Product Code"
+        },
+        "10": {
+            "type": "ID",
+            "longName": "Marketing Basis"
+        },
+        "11": {
+            "type": "ST",
+            "longName": "Marketing Approval ID"
+        },
+        "12": {
+            "type": "CQ",
+            "longName": "Labeled Shelf Life"
+        },
+        "13": {
+            "type": "CQ",
+            "longName": "Expected Shelf Life"
+        },
+        "14": {
+            "type": "TS",
+            "longName": "Date First Marketed"
+        },
+        "15": {
+            "type": "TS",
+            "longName": "Date Last Marketed"
+        }
+    },
+    "PEO": {
+        "1": {
+            "type": "CE",
+            "longName": "Event Identifiers Used"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Event Symptom/Diagnosis Code"
+        },
+        "3": {
+            "type": "TS",
+            "longName": "Event Onset Date/Time"
+        },
+        "4": {
+            "type": "TS",
+            "longName": "Event Exacerbation Date/Time"
+        },
+        "5": {
+            "type": "TS",
+            "longName": "Event Improved Date/Time"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Event Ended Data/Time"
+        },
+        "7": {
+            "type": "XAD",
+            "longName": "Event Location Occurred Address"
+        },
+        "8": {
+            "type": "ID",
+            "longName": "Event Qualification"
+        },
+        "9": {
+            "type": "ID",
+            "longName": "Event Serious"
+        },
+        "10": {
+            "type": "ID",
+            "longName": "Event Expected"
+        },
+        "11": {
+            "type": "ID",
+            "longName": "Event Outcome"
+        },
+        "12": {
+            "type": "ID",
+            "longName": "Patient Outcome"
+        },
+        "13": {
+            "type": "FT",
+            "longName": "Event Description From Others"
+        },
+        "14": {
+            "type": "FT",
+            "longName": "Event From Original Reporter"
+        },
+        "15": {
+            "type": "FT",
+            "longName": "Event Description From Patient"
+        },
+        "16": {
+            "type": "FT",
+            "longName": "Event Description From Practitioner"
+        },
+        "17": {
+            "type": "FT",
+            "longName": "Event Description From Autopsy"
+        },
+        "18": {
+            "type": "CE",
+            "longName": "Cause Of Death"
+        },
+        "19": {
+            "type": "XPN",
+            "longName": "Primary Observer Name"
+        },
+        "20": {
+            "type": "XAD",
+            "longName": "Primary Observer Address"
+        },
+        "21": {
+            "type": "XTN",
+            "longName": "Primary Observer Telephone"
+        },
+        "22": {
+            "type": "ID",
+            "longName": "Primary Observer\u2019s Qualification"
+        },
+        "23": {
+            "type": "ID",
+            "longName": "Confirmation Provided By"
+        },
+        "24": {
+            "type": "TS",
+            "longName": "Primary Observer Aware Date/Time"
+        },
+        "25": {
+            "type": "ID",
+            "longName": "Primary Observer\u2019s identity May Be Divulged"
+        }
+    },
+    "PES": {
+        "1": {
+            "type": "XON",
+            "longName": "Sender Organization Name"
+        },
+        "2": {
+            "type": "XCN",
+            "longName": "Sender Individual Name"
+        },
+        "3": {
+            "type": "XAD",
+            "longName": "Sender Address"
+        },
+        "4": {
+            "type": "XTN",
+            "longName": "Sender Telephone"
+        },
+        "5": {
+            "type": "EI",
+            "longName": "Sender Event Identifier"
+        },
+        "6": {
+            "type": "NM",
+            "longName": "Sender Sequence Number"
+        },
+        "7": {
+            "type": "FT",
+            "longName": "Sender Event Description"
+        },
+        "8": {
+            "type": "FT",
+            "longName": "Sender Comment"
+        },
+        "9": {
+            "type": "TS",
+            "longName": "Sender Aware Date/Time"
+        },
+        "10": {
+            "type": "TS",
+            "longName": "Event Report Date"
+        },
+        "11": {
+            "type": "ID",
+            "longName": "Event Report Timing/Type"
+        },
+        "12": {
+            "type": "ID",
+            "longName": "Event Report Source"
+        },
+        "13": {
+            "type": "ID",
+            "longName": "Event Reported To"
+        }
+    },
+    "PID": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - PID"
+        },
+        "2": {
+            "type": "CX",
+            "longName": "Patient ID"
+        },
+        "3": {
+            "type": "CX",
+            "longName": "Patient Identifier List"
+        },
+        "4": {
+            "type": "CX",
+            "longName": "Alternate Patient ID - PID"
+        },
+        "5": {
+            "type": "XPN",
+            "longName": "Patient Name"
+        },
+        "6": {
+            "type": "XPN",
+            "longName": "Mother\u2019s Maiden Name"
+        },
+        "7": {
+            "type": "TS",
+            "longName": "Date/Time Of Birth"
+        },
+        "8": {
+            "type": "IS",
+            "longName": "Sex"
+        },
+        "9": {
+            "type": "XPN",
+            "longName": "Patient Alias"
+        },
+        "10": {
+            "type": "CE_0005",
+            "longName": "Race"
+        },
+        "11": {
+            "type": "XAD",
+            "longName": "Patient Address"
+        },
+        "12": {
+            "type": "IS",
+            "longName": "County Code"
+        },
+        "13": {
+            "type": "XTN",
+            "longName": "Phone Number - Home"
+        },
+        "14": {
+            "type": "XTN",
+            "longName": "Phone Number - Business"
+        },
+        "15": {
+            "type": "CE_0296",
+            "longName": "Primary Language"
+        },
+        "16": {
+            "type": "CE_0002",
+            "longName": "Marital Status"
+        },
+        "17": {
+            "type": "CE_0006",
+            "longName": "Religion"
+        },
+        "18": {
+            "type": "CX",
+            "longName": "Patient Account Number"
+        },
+        "19": {
+            "type": "ST",
+            "longName": "SSN Number - Patient"
+        },
+        "20": {
+            "type": "DLN",
+            "longName": "Driver's License Number - Patient"
+        },
+        "21": {
+            "type": "CX",
+            "longName": "Mother's Identifier"
+        },
+        "22": {
+            "type": "CE_0189",
+            "longName": "Ethnic Group"
+        },
+        "23": {
+            "type": "ST",
+            "longName": "Birth Place"
+        },
+        "24": {
+            "type": "ID",
+            "longName": "Multiple Birth Indicator"
+        },
+        "25": {
+            "type": "NM",
+            "longName": "Birth Order"
+        },
+        "26": {
+            "type": "CE_0171",
+            "longName": "Citizenship"
+        },
+        "27": {
+            "type": "CE_0172",
+            "longName": "Veterans Military Status"
+        },
+        "28": {
+            "type": "CE_0212",
+            "longName": "Nationality"
+        },
+        "29": {
+            "type": "TS",
+            "longName": "Patient Death Date and Time"
+        },
+        "30": {
+            "type": "ID",
+            "longName": "Patient Death Indicator"
+        }
+    },
+    "PR1": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - PR1"
+        },
+        "2": {
+            "type": "IS",
+            "longName": "Procedure Coding Method"
+        },
+        "3": {
+            "type": "CE_0088",
+            "longName": "Procedure Code"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "Procedure Description"
+        },
+        "5": {
+            "type": "TS",
+            "longName": "Procedure Date/Time"
+        },
+        "6": {
+            "type": "IS",
+            "longName": "Procedure Functional Type"
+        },
+        "7": {
+            "type": "NM",
+            "longName": "Procedure Minutes"
+        },
+        "8": {
+            "type": "XCN",
+            "longName": "Anesthesiologist"
+        },
+        "9": {
+            "type": "IS",
+            "longName": "Anesthesia Code"
+        },
+        "10": {
+            "type": "NM",
+            "longName": "Anesthesia Minutes"
+        },
+        "11": {
+            "type": "XCN",
+            "longName": "Surgeon"
+        },
+        "12": {
+            "type": "XCN",
+            "longName": "Procedure Practitioner"
+        },
+        "13": {
+            "type": "CE_0059",
+            "longName": "Consent Code"
+        },
+        "14": {
+            "type": "NM",
+            "longName": "Procedure Priority"
+        },
+        "15": {
+            "type": "CE_0051",
+            "longName": "Associated Diagnosis Code"
+        },
+        "16": {
+            "type": "CE_0340",
+            "longName": "Procedure Code Modifier"
+        }
+    },
+    "PRA": {
+        "1": {
+            "type": "CE",
+            "longName": "Primary Key Value - PRA"
+        },
+        "2": {
+            "type": "CE_0358",
+            "longName": "Practitioner Group"
+        },
+        "3": {
+            "type": "IS",
+            "longName": "Practitioner Category"
+        },
+        "4": {
+            "type": "ID",
+            "longName": "Provider Billing"
+        },
+        "5": {
+            "type": "SPD",
+            "longName": "Specialty"
+        },
+        "6": {
+            "type": "PLN",
+            "longName": "Practitioner ID Numbers"
+        },
+        "7": {
+            "type": "PIP",
+            "longName": "Privileges"
+        },
+        "8": {
+            "type": "DT",
+            "longName": "Date Entered Practice"
+        }
+    },
+    "PRB": {
+        "1": {
+            "type": "ID",
+            "longName": "Action Code"
+        },
+        "2": {
+            "type": "TS",
+            "longName": "Action Date/Time"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Problem ID"
+        },
+        "4": {
+            "type": "EI",
+            "longName": "Problem Instance ID"
+        },
+        "5": {
+            "type": "EI",
+            "longName": "Episode of Care ID"
+        },
+        "6": {
+            "type": "NM",
+            "longName": "Problem List Priority"
+        },
+        "7": {
+            "type": "TS",
+            "longName": "Problem Established Date/Time"
+        },
+        "8": {
+            "type": "TS",
+            "longName": "Anticipated Problem Resolution Date/Time"
+        },
+        "9": {
+            "type": "TS",
+            "longName": "Actual Problem Resolution Date/Time"
+        },
+        "10": {
+            "type": "CE",
+            "longName": "Problem Classification"
+        },
+        "11": {
+            "type": "CE",
+            "longName": "Problem Management Discipline"
+        },
+        "12": {
+            "type": "CE",
+            "longName": "Problem Persistence"
+        },
+        "13": {
+            "type": "CE",
+            "longName": "Problem Confirmation Status"
+        },
+        "14": {
+            "type": "CE",
+            "longName": "Problem Life Cycle Status"
+        },
+        "15": {
+            "type": "TS",
+            "longName": "Problem Life Cycle Status Date/Time"
+        },
+        "16": {
+            "type": "TS",
+            "longName": "Problem Date of Onset"
+        },
+        "17": {
+            "type": "ST",
+            "longName": "Problem Onset Text"
+        },
+        "18": {
+            "type": "CE",
+            "longName": "Problem Ranking"
+        },
+        "19": {
+            "type": "CE",
+            "longName": "Certainty of Problem"
+        },
+        "20": {
+            "type": "NM",
+            "longName": "Probability of Problem (0-1)"
+        },
+        "21": {
+            "type": "CE",
+            "longName": "Individual Awareness of Problem"
+        },
+        "22": {
+            "type": "CE",
+            "longName": "Problem Prognosis"
+        },
+        "23": {
+            "type": "CE",
+            "longName": "Individual Awareness of Prognosis"
+        },
+        "24": {
+            "type": "ST",
+            "longName": "Family/Significant Other Awareness of Problem/Prognosis"
+        },
+        "25": {
+            "type": "CE",
+            "longName": "Security/Sensitivity"
+        }
+    },
+    "PRC": {
+        "1": {
+            "type": "CE_0132",
+            "longName": "Primary Key Value - PRC"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Facility ID - PRC"
+        },
+        "3": {
+            "type": "CE_0184",
+            "longName": "Department"
+        },
+        "4": {
+            "type": "IS",
+            "longName": "Valid Patient Classes"
+        },
+        "5": {
+            "type": "CP",
+            "longName": "Price"
+        },
+        "6": {
+            "type": "ST",
+            "longName": "Formula"
+        },
+        "7": {
+            "type": "NM",
+            "longName": "Minimum Quantity"
+        },
+        "8": {
+            "type": "NM",
+            "longName": "Maximum Quantity"
+        },
+        "9": {
+            "type": "MO",
+            "longName": "Minimum Price"
+        },
+        "10": {
+            "type": "MO",
+            "longName": "Maximum Price"
+        },
+        "11": {
+            "type": "TS",
+            "longName": "Effective Start Date"
+        },
+        "12": {
+            "type": "TS",
+            "longName": "Effective End Date"
+        },
+        "13": {
+            "type": "IS",
+            "longName": "Price Override Flag"
+        },
+        "14": {
+            "type": "CE_0293",
+            "longName": "Billing Category"
+        },
+        "15": {
+            "type": "ID",
+            "longName": "Chargeable Flag"
+        },
+        "16": {
+            "type": "ID",
+            "longName": "Active/Inactive Flag"
+        },
+        "17": {
+            "type": "MO",
+            "longName": "Cost"
+        },
+        "18": {
+            "type": "IS",
+            "longName": "Charge On Indicator"
+        }
+    },
+    "PRD": {
+        "1": {
+            "type": "CE_0286",
+            "longName": "Provider Role"
+        },
+        "2": {
+            "type": "XPN",
+            "longName": "Provider Name"
+        },
+        "3": {
+            "type": "XAD",
+            "longName": "Provider Address"
+        },
+        "4": {
+            "type": "PL",
+            "longName": "Provider Location"
+        },
+        "5": {
+            "type": "XTN",
+            "longName": "Provider Communication Information"
+        },
+        "7": {
+            "type": "PI",
+            "longName": "Provider Identifiers"
+        },
+        "8": {
+            "type": "TS",
+            "longName": "Effective Start Date of Provider Role"
+        },
+        "9": {
+            "type": "TS",
+            "longName": "Effective End Date of Provider Role"
+        }
+    },
+    "PSH": {
+        "1": {
+            "type": "ST",
+            "longName": "Report Type"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "Report Form Identifier"
+        },
+        "3": {
+            "type": "TS",
+            "longName": "Report Date"
+        },
+        "4": {
+            "type": "TS",
+            "longName": "Report Interval Start Date"
+        },
+        "5": {
+            "type": "TS",
+            "longName": "Report Interval End Date"
+        },
+        "6": {
+            "type": "CQ",
+            "longName": "Quantity Manufactured"
+        },
+        "7": {
+            "type": "CQ",
+            "longName": "Quantity Distributed"
+        },
+        "8": {
+            "type": "ID",
+            "longName": "Quantity Distributed Method"
+        },
+        "9": {
+            "type": "FT",
+            "longName": "Quantity Distributed Comment"
+        },
+        "10": {
+            "type": "CQ",
+            "longName": "Quantity in Use"
+        },
+        "11": {
+            "type": "ID",
+            "longName": "Quantity in Use Method"
+        },
+        "12": {
+            "type": "FT",
+            "longName": "Quantity in Use Comment"
+        },
+        "13": {
+            "type": "NM",
+            "longName": "Number of Product Experience Reports Filed by Facility"
+        },
+        "14": {
+            "type": "NM",
+            "longName": "Number of Product Experience Reports Filed by Distributor"
+        }
+    },
+    "PTH": {
+        "1": {
+            "type": "ID",
+            "longName": "Action Code"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Pathway ID"
+        },
+        "3": {
+            "type": "EI",
+            "longName": "Pathway Instance ID"
+        },
+        "4": {
+            "type": "TS",
+            "longName": "Pathway Established Date/Time"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Pathway Life Cycle Status"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Change Pathway Life Cycle Status Date/Time"
+        }
+    },
+    "PV1": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - PV1"
+        },
+        "2": {
+            "type": "IS",
+            "longName": "Patient Class"
+        },
+        "3": {
+            "type": "PL",
+            "longName": "Assigned Patient Location"
+        },
+        "4": {
+            "type": "IS",
+            "longName": "Admission Type"
+        },
+        "5": {
+            "type": "CX",
+            "longName": "Preadmit Number"
+        },
+        "6": {
+            "type": "PL",
+            "longName": "Prior Patient Location"
+        },
+        "7": {
+            "type": "XCN",
+            "longName": "Attending Doctor"
+        },
+        "8": {
+            "type": "XCN",
+            "longName": "Referring Doctor"
+        },
+        "9": {
+            "type": "XCN",
+            "longName": "Consulting Doctor"
+        },
+        "10": {
+            "type": "IS",
+            "longName": "Hospital Service"
+        },
+        "11": {
+            "type": "PL",
+            "longName": "Temporary Location"
+        },
+        "12": {
+            "type": "IS",
+            "longName": "Preadmit Test Indicator"
+        },
+        "13": {
+            "type": "IS",
+            "longName": "Re-admission Indicator"
+        },
+        "14": {
+            "type": "IS",
+            "longName": "Admit Source"
+        },
+        "15": {
+            "type": "IS",
+            "longName": "Ambulatory Status"
+        },
+        "16": {
+            "type": "IS",
+            "longName": "VIP Indicator"
+        },
+        "17": {
+            "type": "XCN",
+            "longName": "Admitting Doctor"
+        },
+        "18": {
+            "type": "IS",
+            "longName": "Patient Type"
+        },
+        "19": {
+            "type": "CX",
+            "longName": "Visit Number"
+        },
+        "20": {
+            "type": "FC",
+            "longName": "Financial Class"
+        },
+        "21": {
+            "type": "IS",
+            "longName": "Charge Price Indicator"
+        },
+        "22": {
+            "type": "IS",
+            "longName": "Courtesy Code"
+        },
+        "23": {
+            "type": "IS",
+            "longName": "Credit Rating"
+        },
+        "24": {
+            "type": "IS",
+            "longName": "Contract Code"
+        },
+        "25": {
+            "type": "DT",
+            "longName": "Contract Effective Date"
+        },
+        "26": {
+            "type": "NM",
+            "longName": "Contract Amount"
+        },
+        "27": {
+            "type": "NM",
+            "longName": "Contract Period"
+        },
+        "28": {
+            "type": "IS",
+            "longName": "Interest Code"
+        },
+        "29": {
+            "type": "IS",
+            "longName": "Transfer to Bad Debt Code"
+        },
+        "30": {
+            "type": "DT",
+            "longName": "Transfer to Bad Debt Date"
+        },
+        "31": {
+            "type": "IS",
+            "longName": "Bad Debt Agency Code"
+        },
+        "32": {
+            "type": "NM",
+            "longName": "Bad Debt Transfer Amount"
+        },
+        "33": {
+            "type": "NM",
+            "longName": "Bad Debt Recovery Amount"
+        },
+        "34": {
+            "type": "IS",
+            "longName": "Delete Account Indicator"
+        },
+        "35": {
+            "type": "DT",
+            "longName": "Delete Account Date"
+        },
+        "36": {
+            "type": "IS",
+            "longName": "Discharge Disposition"
+        },
+        "37": {
+            "type": "DLD",
+            "longName": "Discharged to Location"
+        },
+        "38": {
+            "type": "CE_0114",
+            "longName": "Diet Type"
+        },
+        "39": {
+            "type": "IS",
+            "longName": "Servicing Facility"
+        },
+        "40": {
+            "type": "IS",
+            "longName": "Bed Status"
+        },
+        "41": {
+            "type": "IS",
+            "longName": "Account Status"
+        },
+        "42": {
+            "type": "PL",
+            "longName": "Pending Location"
+        },
+        "43": {
+            "type": "PL",
+            "longName": "Prior Temporary Location"
+        },
+        "44": {
+            "type": "TS",
+            "longName": "Admit Date/Time"
+        },
+        "45": {
+            "type": "TS",
+            "longName": "Discharge Date/Time"
+        },
+        "46": {
+            "type": "NM",
+            "longName": "Current Patient Balance"
+        },
+        "47": {
+            "type": "NM",
+            "longName": "Total Charges"
+        },
+        "48": {
+            "type": "NM",
+            "longName": "Total Adjustments"
+        },
+        "49": {
+            "type": "NM",
+            "longName": "Total Payments"
+        },
+        "50": {
+            "type": "CX",
+            "longName": "Alternate Visit ID"
+        },
+        "51": {
+            "type": "IS",
+            "longName": "Visit Indicator"
+        },
+        "52": {
+            "type": "XCN",
+            "longName": "Other Healthcare Provider"
+        }
+    },
+    "PV2": {
+        "1": {
+            "type": "PL",
+            "longName": "Prior Pending Location"
+        },
+        "2": {
+            "type": "CE_0129",
+            "longName": "Accommodation Code"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Admit Reason"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Transfer Reason"
+        },
+        "5": {
+            "type": "ST",
+            "longName": "Patient Valuables"
+        },
+        "6": {
+            "type": "ST",
+            "longName": "Patient Valuables Location"
+        },
+        "7": {
+            "type": "IS",
+            "longName": "Visit User Code"
+        },
+        "8": {
+            "type": "TS",
+            "longName": "Expected Admit Date/Time"
+        },
+        "9": {
+            "type": "TS",
+            "longName": "Expected Discharge Date/Time"
+        },
+        "10": {
+            "type": "NM",
+            "longName": "Estimated Length of Inpatient Stay"
+        },
+        "11": {
+            "type": "NM",
+            "longName": "Actual Length of Inpatient Stay"
+        },
+        "12": {
+            "type": "ST",
+            "longName": "Visit Description"
+        },
+        "13": {
+            "type": "XCN",
+            "longName": "Referral Source Code"
+        },
+        "14": {
+            "type": "DT",
+            "longName": "Previous Service Date"
+        },
+        "15": {
+            "type": "ID",
+            "longName": "Employment Illness Related Indicator"
+        },
+        "16": {
+            "type": "IS",
+            "longName": "Purge Status Code"
+        },
+        "17": {
+            "type": "DT",
+            "longName": "Purge Status Date"
+        },
+        "18": {
+            "type": "IS",
+            "longName": "Special Program Code"
+        },
+        "19": {
+            "type": "ID",
+            "longName": "Retention Indicator"
+        },
+        "20": {
+            "type": "NM",
+            "longName": "Expected Number of Insurance Plans"
+        },
+        "21": {
+            "type": "IS",
+            "longName": "Visit Publicity Code"
+        },
+        "22": {
+            "type": "ID",
+            "longName": "Visit Protection Indicator"
+        },
+        "23": {
+            "type": "XON",
+            "longName": "Clinic Organization Name"
+        },
+        "24": {
+            "type": "IS",
+            "longName": "Patient Status Code"
+        },
+        "25": {
+            "type": "IS",
+            "longName": "Visit Priority Code"
+        },
+        "26": {
+            "type": "DT",
+            "longName": "Previous Treatment Date"
+        },
+        "27": {
+            "type": "IS",
+            "longName": "Expected Discharge Disposition"
+        },
+        "28": {
+            "type": "DT",
+            "longName": "Signature on File Date"
+        },
+        "29": {
+            "type": "DT",
+            "longName": "First Similar Illness Date"
+        },
+        "30": {
+            "type": "CE_0218",
+            "longName": "Patient Charge Adjustment Code"
+        },
+        "31": {
+            "type": "IS",
+            "longName": "Recurring Service Code"
+        },
+        "32": {
+            "type": "ID",
+            "longName": "Billing Media Code"
+        },
+        "33": {
+            "type": "TS",
+            "longName": "Expected Surgery Date & Time"
+        },
+        "34": {
+            "type": "ID",
+            "longName": "Military Partnership Code"
+        },
+        "35": {
+            "type": "ID",
+            "longName": "Military Non-Availability Code"
+        },
+        "36": {
+            "type": "ID",
+            "longName": "Newborn Baby Indicator"
+        },
+        "37": {
+            "type": "ID",
+            "longName": "Baby Detained Indicator"
+        }
+    },
+    "QAK": {
+        "1": {
+            "type": "ST",
+            "longName": "Query Tag"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Query Response Status"
+        }
+    },
+    "QRD": {
+        "1": {
+            "type": "TS",
+            "longName": "Query Date/Time"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Query Format Code"
+        },
+        "3": {
+            "type": "ID",
+            "longName": "Query Priority"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "Query ID"
+        },
+        "5": {
+            "type": "ID",
+            "longName": "Deferred Response Type"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Deferred Response Date/Time"
+        },
+        "7": {
+            "type": "CQ",
+            "longName": "Quantity Limited Request"
+        },
+        "8": {
+            "type": "XCN",
+            "longName": "Who Subject Filter"
+        },
+        "9": {
+            "type": "CE_0048",
+            "longName": "What Subject Filter"
+        },
+        "10": {
+            "type": "CE",
+            "longName": "What Department Data Code"
+        },
+        "11": {
+            "type": "VR",
+            "longName": "What Data Code Value Qual."
+        },
+        "12": {
+            "type": "ID",
+            "longName": "Query Results Level"
+        }
+    },
+    "QRF": {
+        "1": {
+            "type": "ST",
+            "longName": "Where Subject Filter"
+        },
+        "2": {
+            "type": "TS",
+            "longName": "When Data Start Date/Time"
+        },
+        "3": {
+            "type": "TS",
+            "longName": "When Data End Date/Time"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "What User Qualifier"
+        },
+        "5": {
+            "type": "ST",
+            "longName": "Other QRY Subject Filter"
+        },
+        "6": {
+            "type": "ID",
+            "longName": "Which Date/Time Qualifier"
+        },
+        "7": {
+            "type": "ID",
+            "longName": "Which Date/Time Status Qualifier"
+        },
+        "8": {
+            "type": "ID",
+            "longName": "Date/Time Selection Qualifier"
+        },
+        "9": {
+            "type": "TQ",
+            "longName": "When Quantity/Timing Qualifier"
+        }
+    },
+    "RDF": {
+        "1": {
+            "type": "NM",
+            "longName": "Number of Columns per Row"
+        },
+        "2": {
+            "type": "RCD",
+            "longName": "Column Description"
+        }
+    },
+    "RF1": {
+        "1": {
+            "type": "CE_0283",
+            "longName": "Referral Status"
+        },
+        "2": {
+            "type": "CE_0280",
+            "longName": "Referral Priority"
+        },
+        "3": {
+            "type": "CE_0281",
+            "longName": "Referral Type"
+        },
+        "4": {
+            "type": "CE_0282",
+            "longName": "Referral Disposition"
+        },
+        "5": {
+            "type": "CE_0284",
+            "longName": "Referral Category"
+        },
+        "6": {
+            "type": "EI",
+            "longName": "Originating Referral Identifier"
+        },
+        "7": {
+            "type": "TS",
+            "longName": "Effective Date"
+        },
+        "8": {
+            "type": "TS",
+            "longName": "Expiration Date"
+        },
+        "9": {
+            "type": "TS",
+            "longName": "Process Date"
+        },
+        "10": {
+            "type": "CE_0336",
+            "longName": "Referral Reason"
+        },
+        "11": {
+            "type": "EI",
+            "longName": "External Referral Identifier"
+        }
+    },
+    "RGS": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - RGS"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Segment Action Code"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Resource Group ID"
+        }
+    },
+    "ROL": {
+        "1": {
+            "type": "EI",
+            "longName": "Role Instance ID"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Action Code"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Role-ROL"
+        },
+        "4": {
+            "type": "XCN",
+            "longName": "Role Person"
+        },
+        "5": {
+            "type": "TS",
+            "longName": "Role Begin Date/Time"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Role End Date/Time"
+        },
+        "7": {
+            "type": "CE",
+            "longName": "Role Duration"
+        },
+        "8": {
+            "type": "CE",
+            "longName": "Role Action Reason"
+        }
+    },
+    "RQ1": {
+        "1": {
+            "type": "ST",
+            "longName": "Anticipated Price"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Manufacturer ID"
+        },
+        "3": {
+            "type": "ST",
+            "longName": "Manufacturer\u2019s Catalog"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Vendor ID"
+        },
+        "5": {
+            "type": "ST",
+            "longName": "Vendor Catalog"
+        },
+        "6": {
+            "type": "ID",
+            "longName": "Taxable"
+        },
+        "7": {
+            "type": "ID",
+            "longName": "Substitute Allowed"
+        }
+    },
+    "RQD": {
+        "1": {
+            "type": "SI",
+            "longName": "Requisition Line Number"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Item Code - Internal"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Item Code - External"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Hospital Item Code"
+        },
+        "5": {
+            "type": "NM",
+            "longName": "Requisition Quantity"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Requisition Unit of Measure"
+        },
+        "7": {
+            "type": "IS",
+            "longName": "Dept. Cost Center"
+        },
+        "8": {
+            "type": "IS",
+            "longName": "Item Natural Account Code"
+        },
+        "9": {
+            "type": "CE",
+            "longName": "Deliver To ID"
+        },
+        "10": {
+            "type": "DT",
+            "longName": "Date Needed"
+        }
+    },
+    "RXA": {
+        "1": {
+            "type": "NM",
+            "longName": "Give Sub-ID Counter"
+        },
+        "2": {
+            "type": "NM",
+            "longName": "Administration Sub-ID Counter"
+        },
+        "3": {
+            "type": "TS",
+            "longName": "Date/Time Start of Administration"
+        },
+        "4": {
+            "type": "TS",
+            "longName": "Date/Time End of Administration"
+        },
+        "5": {
+            "type": "CE_0292",
+            "longName": "Administered Code"
+        },
+        "6": {
+            "type": "NM",
+            "longName": "Administered Amount"
+        },
+        "7": {
+            "type": "CE",
+            "longName": "Administered Units"
+        },
+        "8": {
+            "type": "CE",
+            "longName": "Administered Dosage Form"
+        },
+        "9": {
+            "type": "CE",
+            "longName": "Administration Notes"
+        },
+        "10": {
+            "type": "XCN",
+            "longName": "Administering Provider"
+        },
+        "11": {
+            "type": "LA2",
+            "longName": "Administered-at Location"
+        },
+        "12": {
+            "type": "ST",
+            "longName": "Administered Per (Time Unit)"
+        },
+        "13": {
+            "type": "NM",
+            "longName": "Administered Strength"
+        },
+        "14": {
+            "type": "CE",
+            "longName": "Administered Strength Units"
+        },
+        "15": {
+            "type": "ST",
+            "longName": "Substance Lot Number"
+        },
+        "16": {
+            "type": "TS",
+            "longName": "Substance Expiration Date"
+        },
+        "17": {
+            "type": "CE_0227",
+            "longName": "Substance Manufacturer Name"
+        },
+        "18": {
+            "type": "CE",
+            "longName": "Substance Refusal Reason"
+        },
+        "19": {
+            "type": "CE",
+            "longName": "Indication"
+        },
+        "20": {
+            "type": "ID",
+            "longName": "Completion Status"
+        },
+        "21": {
+            "type": "ID",
+            "longName": "Action Code-RXA"
+        },
+        "22": {
+            "type": "TS",
+            "longName": "System Entry Date/Time"
+        }
+    },
+    "RXC": {
+        "1": {
+            "type": "ID",
+            "longName": "RX Component Type"
+        },
+        "2": {
+            "type": "CE",
+            "longName": "Component Code"
+        },
+        "3": {
+            "type": "NM",
+            "longName": "Component Amount"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Component Units"
+        },
+        "5": {
+            "type": "NM",
+            "longName": "Component Strength"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Component Strength Units"
+        }
+    },
+    "RXD": {
+        "1": {
+            "type": "NM",
+            "longName": "Dispense Sub-ID Counter"
+        },
+        "2": {
+            "type": "CE_0292",
+            "longName": "Dispense/Give Code"
+        },
+        "3": {
+            "type": "TS",
+            "longName": "Date/Time Dispensed"
+        },
+        "4": {
+            "type": "NM",
+            "longName": "Actual Dispense Amount"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Actual Dispense Units"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Actual Dosage Form"
+        },
+        "7": {
+            "type": "ST",
+            "longName": "Prescription Number"
+        },
+        "8": {
+            "type": "NM",
+            "longName": "Number of Refills Remaining"
+        },
+        "9": {
+            "type": "ST",
+            "longName": "Dispense Notes"
+        },
+        "10": {
+            "type": "XCN",
+            "longName": "Dispensing Provider"
+        },
+        "11": {
+            "type": "ID",
+            "longName": "Substitution Status"
+        },
+        "12": {
+            "type": "CQ",
+            "longName": "Total Daily Dose"
+        },
+        "13": {
+            "type": "LA2",
+            "longName": "Dispense-To Location"
+        },
+        "14": {
+            "type": "ID",
+            "longName": "Needs Human Review"
+        },
+        "15": {
+            "type": "CE",
+            "longName": "Pharmacy/Treatment Supplier\u2019s Special Dispensing Instructions"
+        },
+        "16": {
+            "type": "NM",
+            "longName": "Actual Strength"
+        },
+        "17": {
+            "type": "CE",
+            "longName": "Actual Strength Unit"
+        },
+        "18": {
+            "type": "ST",
+            "longName": "Substance Lot Number"
+        },
+        "19": {
+            "type": "TS",
+            "longName": "Substance Expiration Date"
+        },
+        "20": {
+            "type": "CE_0227",
+            "longName": "Substance Manufacturer Name"
+        },
+        "21": {
+            "type": "CE",
+            "longName": "Indication"
+        },
+        "22": {
+            "type": "NM",
+            "longName": "Dispense Package Size"
+        },
+        "23": {
+            "type": "CE",
+            "longName": "Dispense Package Size Unit"
+        },
+        "24": {
+            "type": "ID",
+            "longName": "Dispense Package Method"
+        }
+    },
+    "RXE": {
+        "1": {
+            "type": "TQ",
+            "longName": "Quantity/Timing"
+        },
+        "2": {
+            "type": "CE_0292",
+            "longName": "Give Code"
+        },
+        "3": {
+            "type": "NM",
+            "longName": "Give Amount - Minimum"
+        },
+        "4": {
+            "type": "NM",
+            "longName": "Give Amount - Maximum"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Give Units"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Give Dosage Form"
+        },
+        "7": {
+            "type": "CE",
+            "longName": "Provider\u2019s Administration Instructions"
+        },
+        "8": {
+            "type": "LA1",
+            "longName": "Deliver-to Location"
+        },
+        "9": {
+            "type": "ID",
+            "longName": "Substitution Status"
+        },
+        "10": {
+            "type": "NM",
+            "longName": "Dispense Amount"
+        },
+        "11": {
+            "type": "CE",
+            "longName": "Dispense Units"
+        },
+        "12": {
+            "type": "NM",
+            "longName": "Number Of Refills"
+        },
+        "13": {
+            "type": "XCN",
+            "longName": "Ordering Provider\u2019s DEA Number"
+        },
+        "14": {
+            "type": "XCN",
+            "longName": "Pharmacist/Treatment Supplier\u2019s Verifier ID"
+        },
+        "15": {
+            "type": "ST",
+            "longName": "Prescription Number"
+        },
+        "16": {
+            "type": "NM",
+            "longName": "Number of Refills Remaining"
+        },
+        "17": {
+            "type": "NM",
+            "longName": "Number of Refills/Doses Dispensed"
+        },
+        "18": {
+            "type": "TS",
+            "longName": "D/T of Most Recent Refill or Dose Dispensed"
+        },
+        "19": {
+            "type": "CQ",
+            "longName": "Total Daily Dose"
+        },
+        "20": {
+            "type": "ID",
+            "longName": "Needs Human Review"
+        },
+        "21": {
+            "type": "CE",
+            "longName": "Pharmacy/Treatment Supplier\u2019s Special Dispensing Instructions"
+        },
+        "22": {
+            "type": "ST",
+            "longName": "Give Per (Time Unit)"
+        },
+        "23": {
+            "type": "ST",
+            "longName": "Give Rate Amount"
+        },
+        "24": {
+            "type": "CE",
+            "longName": "Give Rate Units"
+        },
+        "25": {
+            "type": "NM",
+            "longName": "Give Strength"
+        },
+        "26": {
+            "type": "CE",
+            "longName": "Give Strength Units"
+        },
+        "27": {
+            "type": "CE",
+            "longName": "Give Indication"
+        },
+        "28": {
+            "type": "NM",
+            "longName": "Dispense Package Size"
+        },
+        "29": {
+            "type": "CE",
+            "longName": "Dispense Package Size Unit"
+        },
+        "30": {
+            "type": "ID",
+            "longName": "Dispense Package Method"
+        }
+    },
+    "RXG": {
+        "1": {
+            "type": "NM",
+            "longName": "Give Sub-ID Counter"
+        },
+        "2": {
+            "type": "NM",
+            "longName": "Dispense Sub-ID Counter"
+        },
+        "3": {
+            "type": "TQ",
+            "longName": "Quantity/Timing"
+        },
+        "4": {
+            "type": "CE_0292",
+            "longName": "Give Code"
+        },
+        "5": {
+            "type": "NM",
+            "longName": "Give Amount - Minimum"
+        },
+        "6": {
+            "type": "NM",
+            "longName": "Give Amount - Maximum"
+        },
+        "7": {
+            "type": "CE",
+            "longName": "Give Units"
+        },
+        "8": {
+            "type": "CE",
+            "longName": "Give Dosage Form"
+        },
+        "9": {
+            "type": "CE",
+            "longName": "Administration Notes"
+        },
+        "10": {
+            "type": "ID",
+            "longName": "Substitution Status"
+        },
+        "11": {
+            "type": "LA2",
+            "longName": "Dispense-To Location"
+        },
+        "12": {
+            "type": "ID",
+            "longName": "Needs Human Review"
+        },
+        "13": {
+            "type": "CE",
+            "longName": "Pharmacy/Treatment Supplier\u2019s Special Administration Instructions"
+        },
+        "14": {
+            "type": "ST",
+            "longName": "Give Per (Time Unit)"
+        },
+        "15": {
+            "type": "ST",
+            "longName": "Give Rate Amount"
+        },
+        "16": {
+            "type": "CE",
+            "longName": "Give Rate Units"
+        },
+        "17": {
+            "type": "NM",
+            "longName": "Give Strength"
+        },
+        "18": {
+            "type": "CE",
+            "longName": "Give Strength Units"
+        },
+        "19": {
+            "type": "ST",
+            "longName": "Substance Lot Number"
+        },
+        "20": {
+            "type": "TS",
+            "longName": "Substance Expiration Date"
+        },
+        "21": {
+            "type": "CE_0227",
+            "longName": "Substance Manufacturer Name"
+        },
+        "22": {
+            "type": "CE",
+            "longName": "Indication"
+        }
+    },
+    "RXO": {
+        "1": {
+            "type": "CE",
+            "longName": "Requested Give Code"
+        },
+        "2": {
+            "type": "NM",
+            "longName": "Requested Give Amount - Minimum"
+        },
+        "3": {
+            "type": "NM",
+            "longName": "Requested Give Amount - Maximum"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Requested Give Units"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Requested Dosage Form"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Provider\u2019s Pharmacy/Treatment Instructions"
+        },
+        "7": {
+            "type": "CE",
+            "longName": "Provider\u2019s Administration Instructions"
+        },
+        "8": {
+            "type": "LA1",
+            "longName": "Deliver-to Location"
+        },
+        "9": {
+            "type": "ID",
+            "longName": "Allow Substitutions"
+        },
+        "10": {
+            "type": "CE",
+            "longName": "Requested Dispense Code"
+        },
+        "11": {
+            "type": "NM",
+            "longName": "Requested Dispense Amount"
+        },
+        "12": {
+            "type": "CE",
+            "longName": "Requested Dispense Units"
+        },
+        "13": {
+            "type": "NM",
+            "longName": "Number Of Refills"
+        },
+        "14": {
+            "type": "XCN",
+            "longName": "Ordering Provider\u2019s DEA Number"
+        },
+        "15": {
+            "type": "XCN",
+            "longName": "Pharmacist/Treatment Supplier\u2019s Verifier ID"
+        },
+        "16": {
+            "type": "ID",
+            "longName": "Needs Human Review"
+        },
+        "17": {
+            "type": "ST",
+            "longName": "Requested Give Per (Time Unit)"
+        },
+        "18": {
+            "type": "NM",
+            "longName": "Requested Give Strength"
+        },
+        "19": {
+            "type": "CE",
+            "longName": "Requested Give Strength Units"
+        },
+        "20": {
+            "type": "CE",
+            "longName": "Indication"
+        },
+        "21": {
+            "type": "ST",
+            "longName": "Requested Give Rate Amount"
+        },
+        "22": {
+            "type": "CE",
+            "longName": "Requested Give Rate Units"
+        },
+        "23": {
+            "type": "CQ",
+            "longName": "Total Daily Dose"
+        }
+    },
+    "RXR": {
+        "1": {
+            "type": "CE_0162",
+            "longName": "Route"
+        },
+        "2": {
+            "type": "CE_0163",
+            "longName": "Site"
+        },
+        "3": {
+            "type": "CE_0164",
+            "longName": "Administration Device"
+        },
+        "4": {
+            "type": "CE_0165",
+            "longName": "Administration Method"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Routing Instruction"
+        }
+    },
+    "SCH": {
+        "1": {
+            "type": "EI",
+            "longName": "Placer Appointment ID"
+        },
+        "2": {
+            "type": "EI",
+            "longName": "Filler Appointment ID"
+        },
+        "3": {
+            "type": "NM",
+            "longName": "Occurrence Number"
+        },
+        "4": {
+            "type": "EI",
+            "longName": "Placer Group Number"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Schedule ID"
+        },
+        "6": {
+            "type": "CE",
+            "longName": "Event Reason"
+        },
+        "7": {
+            "type": "CE_0276",
+            "longName": "Appointment Reason"
+        },
+        "8": {
+            "type": "CE_0277",
+            "longName": "Appointment Type"
+        },
+        "9": {
+            "type": "NM",
+            "longName": "Appointment Duration"
+        },
+        "10": {
+            "type": "CE",
+            "longName": "Appointment Duration Units"
+        },
+        "11": {
+            "type": "TQ",
+            "longName": "Appointment Timing Quantity"
+        },
+        "12": {
+            "type": "XCN",
+            "longName": "Placer Contact Person"
+        },
+        "13": {
+            "type": "XTN",
+            "longName": "Placer Contact Phone Number"
+        },
+        "14": {
+            "type": "XAD",
+            "longName": "Placer Contact Address"
+        },
+        "15": {
+            "type": "PL",
+            "longName": "Placer Contact Location"
+        },
+        "16": {
+            "type": "XCN",
+            "longName": "Filler Contact Person"
+        },
+        "17": {
+            "type": "XTN",
+            "longName": "Filler Contact Phone Number"
+        },
+        "18": {
+            "type": "XAD",
+            "longName": "Filler Contact Address"
+        },
+        "19": {
+            "type": "PL",
+            "longName": "Filler Contact Location"
+        },
+        "20": {
+            "type": "XCN",
+            "longName": "Entered by Person"
+        },
+        "21": {
+            "type": "XTN",
+            "longName": "Entered by Phone Number"
+        },
+        "22": {
+            "type": "PL",
+            "longName": "Entered by Location"
+        },
+        "23": {
+            "type": "EI",
+            "longName": "Parent Placer Appointment ID"
+        },
+        "24": {
+            "type": "EI",
+            "longName": "Parent Filler Appointment ID"
+        },
+        "25": {
+            "type": "CE_0278",
+            "longName": "Filler Status Code"
+        }
+    },
+    "SPR": {
+        "1": {
+            "type": "ST",
+            "longName": "Query Tag"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Query/ Response Format Code"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "Stored Procedure Name"
+        },
+        "4": {
+            "type": "QIP",
+            "longName": "Input Parameter List"
+        }
+    },
+    "STF": {
+        "1": {
+            "type": "CE",
+            "longName": "Primary Key Value - STF"
+        },
+        "2": {
+            "type": "CX",
+            "longName": "Staff ID Code"
+        },
+        "3": {
+            "type": "XPN",
+            "longName": "Staff Name"
+        },
+        "4": {
+            "type": "IS",
+            "longName": "Staff Type"
+        },
+        "5": {
+            "type": "IS",
+            "longName": "Sex"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Date/Time Of Birth"
+        },
+        "7": {
+            "type": "ID",
+            "longName": "Active/Inactive Flag"
+        },
+        "8": {
+            "type": "CE_0184",
+            "longName": "Department"
+        },
+        "9": {
+            "type": "CE_0069",
+            "longName": "Hospital Service"
+        },
+        "10": {
+            "type": "XTN",
+            "longName": "Phone"
+        },
+        "11": {
+            "type": "XAD",
+            "longName": "Office/Home Address"
+        },
+        "12": {
+            "type": "DIN",
+            "longName": "Institution Activation Date"
+        },
+        "13": {
+            "type": "DIN",
+            "longName": "Institution Inactivation Date"
+        },
+        "14": {
+            "type": "CE",
+            "longName": "Backup Person ID"
+        },
+        "15": {
+            "type": "ST",
+            "longName": "E-Mail Address"
+        },
+        "16": {
+            "type": "CE_0185",
+            "longName": "Preferred Method Of Contact"
+        },
+        "17": {
+            "type": "CE_0002",
+            "longName": "Marital Status"
+        },
+        "18": {
+            "type": "ST",
+            "longName": "Job Title"
+        },
+        "19": {
+            "type": "JCC",
+            "longName": "Job Code/Class"
+        },
+        "20": {
+            "type": "IS",
+            "longName": "Employment Status"
+        },
+        "21": {
+            "type": "ID",
+            "longName": "Additional Insured on  Auto"
+        },
+        "22": {
+            "type": "DLN",
+            "longName": "Driver\u2019s License Number - Staff"
+        },
+        "23": {
+            "type": "ID",
+            "longName": "Copy  Auto Ins"
+        },
+        "24": {
+            "type": "DT",
+            "longName": "Auto Ins. Expires"
+        },
+        "25": {
+            "type": "DT",
+            "longName": "Date Last DMV Review"
+        },
+        "26": {
+            "type": "DT",
+            "longName": "Date Next DMV Review"
+        }
+    },
+    "TXA": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - TXA"
+        },
+        "2": {
+            "type": "IS",
+            "longName": "Document Type"
+        },
+        "3": {
+            "type": "ID",
+            "longName": "Document Content Presentation"
+        },
+        "4": {
+            "type": "TS",
+            "longName": "Activity Date/Time"
+        },
+        "5": {
+            "type": "XCN",
+            "longName": "Primary Activity Provider Code/Name"
+        },
+        "6": {
+            "type": "TS",
+            "longName": "Origination Date/Time"
+        },
+        "7": {
+            "type": "TS",
+            "longName": "Transcription Date/Time"
+        },
+        "8": {
+            "type": "TS",
+            "longName": "Edit Date/Time"
+        },
+        "9": {
+            "type": "XCN",
+            "longName": "Originator Code/Name"
+        },
+        "10": {
+            "type": "XCN",
+            "longName": "Assigned Document Authenticator"
+        },
+        "11": {
+            "type": "XCN",
+            "longName": "Transcriptionist Code/Name"
+        },
+        "12": {
+            "type": "EI",
+            "longName": "Unique Document Number"
+        },
+        "13": {
+            "type": "EI",
+            "longName": "Parent Document Number"
+        },
+        "14": {
+            "type": "EI",
+            "longName": "Placer Order Number"
+        },
+        "15": {
+            "type": "EI",
+            "longName": "Filler Order Number"
+        },
+        "16": {
+            "type": "ST",
+            "longName": "Unique Document File Name"
+        },
+        "17": {
+            "type": "ID",
+            "longName": "Document Completion Status"
+        },
+        "18": {
+            "type": "ID",
+            "longName": "Document Confidentiality Status"
+        },
+        "19": {
+            "type": "ID",
+            "longName": "Document Availability Status"
+        },
+        "20": {
+            "type": "ID",
+            "longName": "Document Storage Status"
+        },
+        "21": {
+            "type": "ST",
+            "longName": "Document Change Reason"
+        },
+        "22": {
+            "type": "PPN",
+            "longName": "Authentication Person, Time Stamp"
+        },
+        "23": {
+            "type": "XCN",
+            "longName": "Distributed Copies (Code and Name of Recipients)"
+        }
+    },
+    "UB1": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - UB1"
+        },
+        "2": {
+            "type": "NM",
+            "longName": "Blood Deductible  (43)"
+        },
+        "3": {
+            "type": "NM",
+            "longName": "Blood Furnished-Pints Of (40)"
+        },
+        "4": {
+            "type": "NM",
+            "longName": "Blood Replaced-Pints (41)"
+        },
+        "5": {
+            "type": "NM",
+            "longName": "Blood Not Replaced-Pints(42)"
+        },
+        "6": {
+            "type": "NM",
+            "longName": "Co-Insurance Days (25)"
+        },
+        "7": {
+            "type": "IS",
+            "longName": "Condition Code (35-39)"
+        },
+        "8": {
+            "type": "NM",
+            "longName": "Covered Days - (23)"
+        },
+        "9": {
+            "type": "NM",
+            "longName": "Non Covered Days - (24)"
+        },
+        "10": {
+            "type": "UVC",
+            "longName": "Value Amount & Code (46-49)"
+        },
+        "11": {
+            "type": "NM",
+            "longName": "Number Of Grace Days (90)"
+        },
+        "12": {
+            "type": "CE_0348",
+            "longName": "Special Program Indicator (44)"
+        },
+        "13": {
+            "type": "CE_0349",
+            "longName": "PSRO/UR Approval Indicator (87)"
+        },
+        "14": {
+            "type": "DT",
+            "longName": "PSRO/UR Approved Stay-Fm (88)"
+        },
+        "15": {
+            "type": "DT",
+            "longName": "PSRO/UR Approved Stay-To (89)"
+        },
+        "16": {
+            "type": "OCD",
+            "longName": "Occurrence (28-32)"
+        },
+        "17": {
+            "type": "CE_0351",
+            "longName": "Occurrence Span (33)"
+        },
+        "18": {
+            "type": "DT",
+            "longName": "Occur Span Start Date(33)"
+        },
+        "19": {
+            "type": "DT",
+            "longName": "Occur Span End Date (33)"
+        },
+        "20": {
+            "type": "ST",
+            "longName": "UB-82 Locator 2"
+        },
+        "21": {
+            "type": "ST",
+            "longName": "UB-82 Locator 9"
+        },
+        "22": {
+            "type": "ST",
+            "longName": "UB-82 Locator 27"
+        },
+        "23": {
+            "type": "ST",
+            "longName": "UB-82 Locator 45"
+        }
+    },
+    "UB2": {
+        "1": {
+            "type": "SI",
+            "longName": "Set ID - UB2"
+        },
+        "2": {
+            "type": "ST",
+            "longName": "Co-Insurance Days (9)"
+        },
+        "3": {
+            "type": "IS",
+            "longName": "Condition Code (24-30)"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "Covered Days (7)"
+        },
+        "5": {
+            "type": "ST",
+            "longName": "Non-Covered Days (8)"
+        },
+        "6": {
+            "type": "UVC",
+            "longName": "Value Amount & Code"
+        },
+        "7": {
+            "type": "OCD",
+            "longName": "Occurrence Code & Date (32-35)"
+        },
+        "8": {
+            "type": "OSP",
+            "longName": "Occurrence Span Code/Dates (36)"
+        },
+        "9": {
+            "type": "ST",
+            "longName": "UB92 Locator 2 (State)"
+        },
+        "10": {
+            "type": "ST",
+            "longName": "UB92 Locator 11 (State)"
+        },
+        "11": {
+            "type": "ST",
+            "longName": "UB92 Locator 31 (National)"
+        },
+        "12": {
+            "type": "ST",
+            "longName": "Document Control Number"
+        },
+        "13": {
+            "type": "ST",
+            "longName": "UB92 Locator 49 (National)"
+        },
+        "14": {
+            "type": "ST",
+            "longName": "UB92 Locator 56 (State)"
+        },
+        "15": {
+            "type": "ST",
+            "longName": "UB92 Locator 57 (National)"
+        },
+        "16": {
+            "type": "ST",
+            "longName": "UB92 Locator 78 (State)"
+        },
+        "17": {
+            "type": "NM",
+            "longName": "Special Visit Count"
+        }
+    },
+    "URD": {
+        "1": {
+            "type": "TS",
+            "longName": "R/U Date/Time"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Report Priority"
+        },
+        "3": {
+            "type": "XCN",
+            "longName": "R/U Who Subject Definition"
+        },
+        "4": {
+            "type": "CE_0048",
+            "longName": "R/U What Subject Definition"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "R/U What Department Code"
+        },
+        "6": {
+            "type": "ST",
+            "longName": "R/U Display/Print Locations"
+        },
+        "7": {
+            "type": "ID",
+            "longName": "R/U Results Level"
+        }
+    },
+    "URS": {
+        "1": {
+            "type": "ST",
+            "longName": "R/U Where Subject Definition"
+        },
+        "2": {
+            "type": "TS",
+            "longName": "R/U When Data Start Date/Time"
+        },
+        "3": {
+            "type": "TS",
+            "longName": "R/U When Data End Date/Time"
+        },
+        "4": {
+            "type": "ST",
+            "longName": "R/U What User Qualifier"
+        },
+        "5": {
+            "type": "ST",
+            "longName": "R/U Other Results Subject Definition"
+        },
+        "6": {
+            "type": "ID",
+            "longName": "R/U Which Date/Time Qualifier"
+        },
+        "7": {
+            "type": "ID",
+            "longName": "R/U Which Date/Time Status Qualifier"
+        },
+        "8": {
+            "type": "ID",
+            "longName": "R/U Date/Time Selection Qualifier"
+        },
+        "9": {
+            "type": "TQ",
+            "longName": "R/U Quantity/Timing Qualifier"
+        }
+    },
+    "VAR": {
+        "1": {
+            "type": "EI",
+            "longName": "Variance Instance ID"
+        },
+        "2": {
+            "type": "TS",
+            "longName": "Documented Date/Time"
+        },
+        "3": {
+            "type": "TS",
+            "longName": "Stated Variance Date/Time"
+        },
+        "4": {
+            "type": "XCN",
+            "longName": "Variance Originator"
+        },
+        "5": {
+            "type": "CE",
+            "longName": "Variance Classification"
+        },
+        "6": {
+            "type": "ST",
+            "longName": "Variance Description"
+        }
+    },
+    "VTQ": {
+        "1": {
+            "type": "ST",
+            "longName": "Query Tag"
+        },
+        "2": {
+            "type": "ID",
+            "longName": "Query/ Response Format Code"
+        },
+        "3": {
+            "type": "CE",
+            "longName": "VT Query Name"
+        },
+        "4": {
+            "type": "CE",
+            "longName": "Virtual Table Name"
+        },
+        "5": {
+            "type": "QSC",
+            "longName": "Selection Criteria"
+        }
+    }
+}

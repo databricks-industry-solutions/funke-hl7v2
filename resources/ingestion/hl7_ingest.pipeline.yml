@@ -1,0 +1,24 @@
+resources:
+  pipelines:
+    hl7_ingest:
+      name: HL7 Ingestion
+      libraries:
+        - glob:
+            include: transformations/**
+      serverless: true
+      continuous: true
+      catalog: ${resources.schemas.primary.catalog_name}
+      schema: ${resources.schemas.primary.name}
+      root_path: .
+      environment:
+        dependencies:
+          - ../../dist/funke-0.1.*.whl
+      configuration:
+        catalog: ${var.catalog}
+        schema: ${resources.schemas.primary.name}
+        landing_volume: ${resources.volumes.landing.name}
+      permissions:
+        # The control-room app's service principal pauses/resumes this pipeline at runtime to
+        # idle serverless compute between demo sessions.
+        - level: CAN_MANAGE
+          service_principal_name: ${resources.apps.adt_control_room.service_principal_client_id}

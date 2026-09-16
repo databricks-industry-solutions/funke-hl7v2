@@ -1,0 +1,47 @@
+# This is a Databricks asset bundle definition for hl7_ingest.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+bundle:
+  name: hl7_ingest
+
+include:
+  - resources/*.yml
+  - resources/*/*.yml
+
+sync:
+  # The root .gitignore ignores any `dist/`; force-include the built control-room frontend so
+  # it is synced and packaged into the app (FastAPI serves src/app/frontend/dist at runtime).
+  include:
+    - src/app/frontend/dist/**
+
+presets:
+  # Applied to every resource in the bundle that supports tagging (jobs, pipeline).
+  tags:
+    project: funke
+
+variables:
+  catalog:
+    description: This is the catalog that you want to deploy the accelerator resources to
+    default: main
+  schema:
+    description: This is the schema that will house the data and the required assets
+    default: hl7
+  warehouse_id:
+    description: SQL warehouse id backing the bed-utilization dashboard (required; pass --var warehouse_id=<id>)
+
+artifacts:
+  lib_funke:
+    type: whl
+    build: python3 -m pip install --upgrade build && python3 -m build
+    dynamic_version: true
+
+targets:
+  dev:
+    # The default target uses 'mode: development' to create a development copy.
+    # - Deployed resources get prefixed with '[dev my_user_name]'
+    # - Any job schedules and triggers are paused by default.
+    # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
+    mode: development
+    default: true
+
+  prod:
+    mode: production

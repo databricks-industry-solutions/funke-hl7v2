@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!--   v2.xml Message Definitions for Version 2.4 - here: SSR_U04-->
+<!--   Copyright (c) 1999-2016, Health Level Seven. All rights reserved.   -->
+<!--   (generated on 17.11.2016 by HL7-Database) D:\Eigene Dateien\HL7\Datenbank\hl7_92.mdb-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:hl7-org:v2xml" xmlns:hl7="urn:hl7-org:v2xml" targetNamespace="urn:hl7-org:v2xml" version="1.1"><!-- import segment definition for version --><xsd:include schemaLocation="segments.xsd"/><!-- MESSAGE SSR_U04 --><!-- .. message definition SSR_U04 --><xsd:complexType name="SSR_U04.CONTENT"><xsd:sequence><xsd:element ref="MSH" minOccurs="1" maxOccurs="1"/><xsd:element ref="EQU" minOccurs="1" maxOccurs="1"/><xsd:element ref="SAC" minOccurs="1" maxOccurs="unbounded"/><xsd:element ref="ROL" minOccurs="0" maxOccurs="1"/></xsd:sequence></xsd:complexType><xsd:element name="SSR_U04" type="SSR_U04.CONTENT"/></xsd:schema>

@@ -1,0 +1,3007 @@
+{
+    "DT": {
+        "class": "SIMPLE",
+        "fields": {}
+    },
+    "DTM": {
+        "class": "SIMPLE",
+        "fields": {}
+    },
+    "GTS": {
+        "class": "SIMPLE",
+        "fields": {}
+    },
+    "ID": {
+        "class": "SIMPLE",
+        "fields": {}
+    },
+    "IS": {
+        "class": "SIMPLE",
+        "fields": {}
+    },
+    "NM": {
+        "class": "SIMPLE",
+        "fields": {}
+    },
+    "SI": {
+        "class": "SIMPLE",
+        "fields": {}
+    },
+    "SNM": {
+        "class": "SIMPLE",
+        "fields": {}
+    },
+    "ST": {
+        "class": "SIMPLE",
+        "fields": {}
+    },
+    "TM": {
+        "class": "SIMPLE",
+        "fields": {}
+    },
+    "AD": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Street Address"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Other Designation"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "City"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "State or Province"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Zip or Postal Code"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Country"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Address Type"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Other Geographic Designation"
+            }
+        }
+    },
+    "AUI": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Authorization Number"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DT",
+                "longName": "Date"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Source"
+            }
+        }
+    },
+    "CCD": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Invocation Event"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Date/time"
+            }
+        }
+    },
+    "CCP": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Channel Calibration Sensitivity Correction Factor"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Channel Calibration Baseline"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Channel Calibration Time Skew"
+            }
+        }
+    },
+    "CD": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "WVI",
+                "longName": "Channel Identifier"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "WVS",
+                "longName": "Waveform Source"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CSU",
+                "longName": "Channel Sensitivity and Units"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CCP",
+                "longName": "Channel Calibration Parameters"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Channel Sampling Frequency"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NR",
+                "longName": "Minimum and Maximum Data Values"
+            }
+        }
+    },
+    "CF": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Identifier"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "FT",
+                "longName": "Formatted Text"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name of Coding System"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Identifier"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "FT",
+                "longName": "Alternate Formatted Text"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name of Alternate Coding System"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Coding System Version ID"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Coding System Version ID"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Original Text"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Identifier"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "FT",
+                "longName": "Second Alternate Formatted Text"
+            },
+            "12": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name of Second Alternate Coding System"
+            },
+            "13": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Coding System Version ID"
+            },
+            "14": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Coding System OID"
+            },
+            "15": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Value Set OID"
+            },
+            "16": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Value Set Version ID"
+            },
+            "17": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Coding System OID"
+            },
+            "18": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Value Set OID"
+            },
+            "19": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Alternate Value Set Version ID"
+            },
+            "20": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Coding System OID"
+            },
+            "21": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Value Set OID"
+            },
+            "22": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Second Alternate Value Set Version ID"
+            }
+        }
+    },
+    "CNE": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Identifier"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Text"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name of Coding System"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Identifier"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Text"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name of Alternate Coding System"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Coding System Version ID"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Coding System Version ID"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Original Text"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Identifier"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Text"
+            },
+            "12": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name of Second Alternate Coding System"
+            },
+            "13": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Coding System Version ID"
+            },
+            "14": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Coding System OID"
+            },
+            "15": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Value Set OID"
+            },
+            "16": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Value Set Version ID"
+            },
+            "17": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Coding System OID"
+            },
+            "18": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Value Set OID"
+            },
+            "19": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Alternate Value Set Version ID"
+            },
+            "20": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Coding System OID"
+            },
+            "21": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Value Set OID"
+            },
+            "22": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Second Alternate Value Set Version ID"
+            }
+        }
+    },
+    "CNN": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "ID Number"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Family Name"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Given Name"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second and Further Given Names or Initials Thereof"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Suffix (e.g., JR or III)"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Prefix (e.g., DR)"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Degree (e.g., MD)"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Source Table"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Assigning Authority   - Namespace ID"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Assigning Authority  - Universal ID"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Assigning Authority  - Universal ID Type"
+            }
+        }
+    },
+    "CP": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "MO",
+                "longName": "Price"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Price Type"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "From Value"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "To Value"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Range Units"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Range Type"
+            }
+        }
+    },
+    "CQ": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Quantity"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Units"
+            }
+        }
+    },
+    "CSU": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Channel Sensitivity"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Unit of Measure Identifier"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Unit of Measure Description"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Unit of Measure Coding System"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Unit of Measure Identifier"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Unit of Measure Description"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Alternate Unit of Measure Coding System"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Unit of Measure Coding System Version ID"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Unit of Measure Coding System Version ID"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Original Text"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Unit of Measure Identifier"
+            },
+            "12": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Unit of Measure Text"
+            },
+            "13": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name of Second Alternate Unit of Measure Coding Sy"
+            },
+            "14": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Unit of Measure Coding System Ver"
+            },
+            "15": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Unit of Measure Coding System OID"
+            },
+            "16": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Unit of Measure Value Set OID"
+            },
+            "17": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Unit of Measure Value Set Version ID"
+            },
+            "18": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Unit of Measure Coding System OID"
+            },
+            "19": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Unit of Measure Value Set OID"
+            },
+            "20": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Alternate Unit of Measure Value Set Version ID"
+            },
+            "21": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Unit of Measure Coding System OID"
+            },
+            "22": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Unit of Measure Value Set OID"
+            },
+            "23": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Unit of Measure Value Set Version ID"
+            }
+        }
+    },
+    "CWE": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Identifier"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Text"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name of Coding System"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Identifier"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Text"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name of Alternate Coding System"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Coding System Version ID"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Coding System Version ID"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Original Text"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Identifier"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Text"
+            },
+            "12": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name of Second Alternate Coding System"
+            },
+            "13": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Coding System Version ID"
+            },
+            "14": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Coding System OID"
+            },
+            "15": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Value Set OID"
+            },
+            "16": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Value Set Version ID"
+            },
+            "17": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Coding System OID"
+            },
+            "18": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Alternate Value Set OID"
+            },
+            "19": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Alternate Value Set Version ID"
+            },
+            "20": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Coding System OID"
+            },
+            "21": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second Alternate Value Set OID"
+            },
+            "22": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Second Alternate Value Set Version ID"
+            }
+        }
+    },
+    "CX": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "ID Number"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Identifier Check Digit"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Check Digit Scheme"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Assigning Authority"
+            },
+            "5": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Identifier Type Code"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Assigning Facility"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DT",
+                "longName": "Effective Date"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DT",
+                "longName": "Expiration Date"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Assigning Jurisdiction"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Assigning Agency or Department"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Security Check"
+            },
+            "12": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Security Check Scheme"
+            }
+        }
+    },
+    "DDI": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Delay Days"
+            },
+            "2": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "MO",
+                "longName": "Monetary Amount"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Number of Days"
+            }
+        }
+    },
+    "DIN": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Date"
+            },
+            "2": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Institution Name"
+            }
+        }
+    },
+    "DLD": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Discharge to Location"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Effective Date"
+            }
+        }
+    },
+    "DLN": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "License Number"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Issuing State, Province, Country"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DT",
+                "longName": "Expiration Date"
+            }
+        }
+    },
+    "DLT": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NR",
+                "longName": "Normal Range"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Numeric Threshold"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Change Computation"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Days Retained"
+            }
+        }
+    },
+    "DR": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Range Start Date/Time"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Range End Date/Time"
+            }
+        }
+    },
+    "DTN": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Day Type"
+            },
+            "2": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Number of Days"
+            }
+        }
+    },
+    "ED": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Source Application"
+            },
+            "2": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Type of Data"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Data Subtype"
+            },
+            "4": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Encoding"
+            },
+            "5": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "TX",
+                "longName": "Data"
+            }
+        }
+    },
+    "EI": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Entity Identifier"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Namespace ID"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Universal ID"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Universal ID Type"
+            }
+        }
+    },
+    "EIP": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "EI",
+                "longName": "Placer Assigned Identifier"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "EI",
+                "longName": "Filler Assigned Identifier"
+            }
+        }
+    },
+    "ERL": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Segment ID"
+            },
+            "2": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Segment Sequence"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Field Position"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Field Repetition"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Component Number"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Sub-Component Number"
+            }
+        }
+    },
+    "FC": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Financial Class Code"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Effective Date"
+            }
+        }
+    },
+    "FN": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Surname"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Own Surname Prefix"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Own Surname"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Surname Prefix from Partner/Spouse"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Surname from Partner/Spouse"
+            }
+        }
+    },
+    "HD": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Namespace ID"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Universal ID"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Universal ID Type"
+            }
+        }
+    },
+    "ICD": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Certification Patient Type"
+            },
+            "2": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Certification Required"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Date/Time Certification Required"
+            }
+        }
+    },
+    "JCC": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Job Code"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Job Class"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "TX",
+                "longName": "Job Description Text"
+            }
+        }
+    },
+    "MA": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Sample Y From Channel 1"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Sample Y From Channel 2"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Sample Y From Channel 3"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Sample Y From Channel 4"
+            }
+        }
+    },
+    "MO": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Quantity"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Denomination"
+            }
+        }
+    },
+    "MOC": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "MO",
+                "longName": "Monetary Amount"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Charge Code"
+            }
+        }
+    },
+    "MOP": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Money or Percentage Indicator"
+            },
+            "2": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Money or Percentage Quantity"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Monetary  Denomination"
+            }
+        }
+    },
+    "MSG": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Message Code"
+            },
+            "2": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Trigger Event"
+            },
+            "3": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Message Structure"
+            }
+        }
+    },
+    "NA": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Value1"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Value2"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Value3"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Value4"
+            }
+        }
+    },
+    "NDL": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CNN",
+                "longName": "Name"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Start Date/time"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "End Date/time"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Point of Care"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Room"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Bed"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Facility"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Location Status"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Patient Location Type"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Building"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Floor"
+            }
+        }
+    },
+    "NR": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Low Value"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "High Value"
+            }
+        }
+    },
+    "OCD": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CNE",
+                "longName": "Occurrence Code"
+            },
+            "2": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "DT",
+                "longName": "Occurrence Date"
+            }
+        }
+    },
+    "OG": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Original Sub-Identifier"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Group"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Sequence"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Identifier"
+            }
+        }
+    },
+    "OSP": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CNE",
+                "longName": "Occurrence Span Code"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DT",
+                "longName": "Occurrence Span Start Date"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DT",
+                "longName": "Occurrence Span Stop Date"
+            }
+        }
+    },
+    "PIP": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Privilege"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Privilege Class"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DT",
+                "longName": "Expiration Date"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DT",
+                "longName": "Activation Date"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "EI",
+                "longName": "Facility"
+            }
+        }
+    },
+    "PL": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Point of Care"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Room"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Bed"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Facility"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Location Status"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "IS",
+                "longName": "Person Location Type"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Building"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Floor"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Location Description"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "EI",
+                "longName": "Comprehensive Location Identifier"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Assigning Authority for Location"
+            }
+        }
+    },
+    "PLN": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "ID Number"
+            },
+            "2": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Type of ID Number"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "State/other Qualifying Information"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DT",
+                "longName": "Expiration Date"
+            }
+        }
+    },
+    "PPN": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Person Identifier"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "FN",
+                "longName": "Family Name"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Given Name"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second and Further Given Names or Initials Thereof"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Suffix (e.g., JR or III)"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Prefix (e.g., DR)"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Source Table"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Assigning Authority"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name Type Code"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Identifier Check Digit"
+            },
+            "12": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Check Digit Scheme"
+            },
+            "13": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Identifier Type Code"
+            },
+            "14": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Assigning Facility"
+            },
+            "15": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Date/Time Action Performed"
+            },
+            "16": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name Representation Code"
+            },
+            "17": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Name Context"
+            },
+            "19": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name Assembly Order"
+            },
+            "20": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Effective Date"
+            },
+            "21": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Expiration Date"
+            },
+            "22": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Professional Suffix"
+            },
+            "23": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Assigning Jurisdiction"
+            },
+            "24": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Assigning Agency or Department"
+            },
+            "25": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Security Check"
+            },
+            "26": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Security Check Scheme"
+            }
+        }
+    },
+    "PRL": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Parent Observation Identifier"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "OG",
+                "longName": "Parent Observation Sub-identifier"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "TX",
+                "longName": "Parent Observation Value Descriptor"
+            }
+        }
+    },
+    "PT": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Processing ID"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Processing Mode"
+            }
+        }
+    },
+    "PTA": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Policy Type"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Amount Class"
+            },
+            "4": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "MOP",
+                "longName": "Money or Percentage"
+            }
+        }
+    },
+    "QIP": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Segment Field Name"
+            },
+            "2": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Values"
+            }
+        }
+    },
+    "QSC": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Segment Field Name"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Relational Operator"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Value"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Relational Conjunction"
+            }
+        }
+    },
+    "RCD": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Segment Field Name"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "HL7 Data Type"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Maximum Column Width"
+            }
+        }
+    },
+    "RFR": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "NR",
+                "longName": "Numeric Range"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Administrative Sex"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NR",
+                "longName": "Age Range"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NR",
+                "longName": "Gestational Age Range"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Species"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Race/subspecies"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "TX",
+                "longName": "Conditions"
+            }
+        }
+    },
+    "RI": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Repeat Pattern"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Explicit Time Interval"
+            }
+        }
+    },
+    "RMC": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Room Type"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Amount Type"
+            },
+            "4": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "MOP",
+                "longName": "Money or Percentage"
+            }
+        }
+    },
+    "RP": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Pointer"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Application ID"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Type of Data"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Subtype"
+            }
+        }
+    },
+    "RPT": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Repeat Pattern Code"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Calendar Alignment"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Phase Range Begin Value"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Phase Range End Value"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Period Quantity"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Period Units"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Institution Specified Time"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Event"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Event Offset Quantity"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Event Offset Units"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "GTS",
+                "longName": "General Timing Specification"
+            }
+        }
+    },
+    "SAD": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Street or Mailing Address"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Street Name"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Dwelling Number"
+            }
+        }
+    },
+    "SCV": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Parameter Class"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Parameter Value"
+            }
+        }
+    },
+    "SN": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Comparator"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Num1"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Separator/Suffix"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Num2"
+            }
+        }
+    },
+    "SPD": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Specialty Name"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Governing Board"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Eligible or Certified"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DT",
+                "longName": "Date of Certification"
+            }
+        }
+    },
+    "SRT": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Sort-by Field"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Sequencing"
+            }
+        }
+    },
+    "UVC": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Value Code"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "MO",
+                "longName": "Value Amount"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Non-Monetary Value Amount / Quantity"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Non-Monetary Value Amount / Units"
+            }
+        }
+    },
+    "VH": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Start Day Range"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "End Day Range"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "TM",
+                "longName": "Start Hour Range"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "TM",
+                "longName": "End Hour Range"
+            }
+        }
+    },
+    "VID": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Version ID"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Internationalization Code"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "International Version ID"
+            }
+        }
+    },
+    "VR": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "First Data Code Value"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Last Data Code Value"
+            }
+        }
+    },
+    "WVI": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Channel Number"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Channel Name"
+            }
+        }
+    },
+    "WVS": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Source One Name"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Source Two Name"
+            }
+        }
+    },
+    "XAD": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "SAD",
+                "longName": "Street Address"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Other Designation"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "City"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "State or Province"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Zip or Postal Code"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Country"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Address Type"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Other Geographic Designation"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "County/Parish Code"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Census Tract"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Address Representation Code"
+            },
+            "13": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Effective Date"
+            },
+            "14": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Expiration Date"
+            },
+            "15": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Expiration Reason"
+            },
+            "16": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Temporary Indicator"
+            },
+            "17": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Bad Address Indicator"
+            },
+            "18": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Address Usage"
+            },
+            "19": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Addressee"
+            },
+            "20": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Comment"
+            },
+            "21": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Preference Order"
+            },
+            "22": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Protection Code"
+            },
+            "23": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "EI",
+                "longName": "Address Identifier"
+            }
+        }
+    },
+    "XCN": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Person Identifier"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "FN",
+                "longName": "Family Name"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Given Name"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second and Further Given Names or Initials Thereof"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Suffix (e.g., JR or III)"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Prefix (e.g., DR)"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Source Table"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Assigning Authority"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name Type Code"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Identifier Check Digit"
+            },
+            "12": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Check Digit Scheme"
+            },
+            "13": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Identifier Type Code"
+            },
+            "14": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Assigning Facility"
+            },
+            "15": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name Representation Code"
+            },
+            "16": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Name Context"
+            },
+            "18": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name Assembly Order"
+            },
+            "19": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Effective Date"
+            },
+            "20": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Expiration Date"
+            },
+            "21": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Professional Suffix"
+            },
+            "22": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Assigning Jurisdiction"
+            },
+            "23": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Assigning Agency or Department"
+            },
+            "24": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Security Check"
+            },
+            "25": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Security Check Scheme"
+            }
+        }
+    },
+    "XON": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Organization Name"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Organization Name Type Code"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Assigning Authority"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Identifier Type Code"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "HD",
+                "longName": "Assigning Facility"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name Representation Code"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Organization Identifier"
+            }
+        }
+    },
+    "XPN": {
+        "class": "COMPLEX",
+        "fields": {
+            "1": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "FN",
+                "longName": "Family Name"
+            },
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Given Name"
+            },
+            "3": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Second and Further Given Names or Initials Thereof"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Suffix (e.g., JR or III)"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Prefix (e.g., DR)"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name Type Code"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name Representation Code"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Name Context"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Name Assembly Order"
+            },
+            "12": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Effective Date"
+            },
+            "13": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Expiration Date"
+            },
+            "14": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Professional Suffix"
+            },
+            "15": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Called By"
+            }
+        }
+    },
+    "XTN": {
+        "class": "COMPLEX",
+        "fields": {
+            "2": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Telecommunication Use Code"
+            },
+            "3": {
+                "min_occurences": "1",
+                "max_occurences": "1",
+                "type": "ID",
+                "longName": "Telecommunication Equipment Type"
+            },
+            "4": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Communication Address"
+            },
+            "5": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "SNM",
+                "longName": "Country Code"
+            },
+            "6": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "SNM",
+                "longName": "Area/City Code"
+            },
+            "7": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "SNM",
+                "longName": "Local Number"
+            },
+            "8": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "SNM",
+                "longName": "Extension"
+            },
+            "9": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Any Text"
+            },
+            "10": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Extension Prefix"
+            },
+            "11": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Speed Dial Code"
+            },
+            "12": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "ST",
+                "longName": "Unformatted Telephone number"
+            },
+            "13": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Effective Start Date"
+            },
+            "14": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "DTM",
+                "longName": "Expiration Date"
+            },
+            "15": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Expiration Reason"
+            },
+            "16": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "CWE",
+                "longName": "Protection Code"
+            },
+            "17": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "EI",
+                "longName": "Shared Telecommunication Identifier"
+            },
+            "18": {
+                "min_occurences": "0",
+                "max_occurences": "1",
+                "type": "NM",
+                "longName": "Preference Order"
+            }
+        }
+    }
+}

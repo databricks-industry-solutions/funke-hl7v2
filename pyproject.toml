@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "funke"
+version = "0.1.0a1"
+authors = [
+  { name = "brian.nowak@databricks.com" },
+  { name = "chris.mantz@databricks.com" },
+  { name = "sean.fischer@databricks.com" }
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[project.optional-dependencies]
+local = [
+    "pyspark>=3.5.0",
+]
+test = [
+    "pytest >= 8.4.0",
+    "pyspark >= 3.5.0",
+    "black",
+]
+
+[tool.black]
+target-version = ["py310"]
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+testpaths = [
+    "tests",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"funke" = ["data/*.json"]

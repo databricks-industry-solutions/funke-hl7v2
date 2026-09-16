@@ -1,0 +1,23 @@
+resources:
+  apps:
+    adt_control_room:
+      name: adt-control-room
+      description: >-
+        Control room for the synthetic ADT generator: start/stop the realtime HL7v2 stream and
+        watch live occupancy, message rate and the event feed. Generation runs in-process and
+        writes to the landing volume via the Files API.
+      source_code_path: ../../src/app
+      resources:
+        # Backs the cold-start census rehydrate query (Statement Execution API). Injected as
+        # DATABRICKS_WAREHOUSE_ID.
+        - name: warehouse
+          sql_warehouse:
+            id: ${var.warehouse_id}
+            permission: CAN_USE
+        # Grants the app service principal WRITE_VOLUME on the landing volume and injects its
+        # path (/Volumes/<catalog>/<schema>/landing) as LANDING_VOLUME_PATH.
+        - name: landing-volume
+          uc_securable:
+            securable_type: VOLUME
+            securable_full_name: ${var.catalog}.${resources.schemas.primary.name}.${resources.volumes.landing.name}
+            permission: WRITE_VOLUME

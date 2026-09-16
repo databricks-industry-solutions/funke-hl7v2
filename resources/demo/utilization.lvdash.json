@@ -1,0 +1,2081 @@
+{
+  "datasets": [
+    {
+      "name": "network_kpi",
+      "displayName": "Network KPI",
+      "queryLines": [
+        "SELECT SUM(occupied_beds) AS occupied_beds, SUM(bed_capacity) AS bed_capacity, ROUND(100.0 * SUM(occupied_beds) / NULLIF(SUM(bed_capacity), 0), 1) AS utilization_pct FROM ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.bed_utilization"
+      ]
+    },
+    {
+      "name": "util_by_facility",
+      "displayName": "Utilization by Facility",
+      "queryLines": [
+        "SELECT facility_name, facility_kind, SUM(occupied_beds) AS occupied_beds, SUM(bed_capacity) AS bed_capacity, ROUND(100.0 * SUM(occupied_beds) / NULLIF(SUM(bed_capacity), 0), 1) AS utilization_pct FROM ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.bed_utilization GROUP BY facility_name, facility_kind"
+      ]
+    },
+    {
+      "name": "occupancy_by_kind",
+      "displayName": "Occupancy by Facility Kind",
+      "queryLines": [
+        "SELECT facility_kind, SUM(occupied_beds) AS occupied_beds FROM ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.bed_utilization GROUP BY facility_kind"
+      ]
+    },
+    {
+      "name": "events_over_time",
+      "displayName": "Patient Flow Over Time",
+      "queryLines": [
+        "SELECT DATE_TRUNC('HOUR', event_ts) AS event_hour, CASE WHEN event_type IN ('A01', 'A04') THEN 'Admit' WHEN event_type = 'A03' THEN 'Discharge' ELSE 'Transfer' END AS flow, COUNT(*) AS event_count FROM ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.adt_events WHERE event_ts IS NOT NULL GROUP BY 1, 2"
+      ]
+    },
+    {
+      "name": "unit_detail",
+      "displayName": "Unit Detail",
+      "queryLines": [
+        "SELECT facility_name, unit, patient_class, occupied_beds, bed_capacity, available_beds, utilization_pct FROM ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.bed_utilization"
+      ]
+    },
+    {
+      "name": "critical_units",
+      "displayName": "Critical Units (High Utilization)",
+      "queryLines": [
+        "SELECT\n",
+        "  facility_name,\n",
+        "  facility_kind,\n",
+        "  unit,\n",
+        "  patient_class,\n",
+        "  occupied_beds,\n",
+        "  bed_capacity,\n",
+        "  available_beds,\n",
+        "  utilization_pct,\n",
+        "  CASE\n",
+        "    WHEN utilization_pct >= 95 THEN 'CRITICAL'\n",
+        "    WHEN utilization_pct >= 85 THEN 'WARNING'\n",
+        "    ELSE 'OK'\n",
+        "  END AS status\n",
+        "FROM\n",
+        "  ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.bed_utilization\n",
+        "WHERE\n",
+        "  utilization_pct >= 85\n",
+        "ORDER BY\n",
+        "  utilization_pct DESC"
+      ]
+    },
+    {
+      "name": "event_type_breakdown",
+      "displayName": "Event Type Breakdown",
+      "queryLines": [
+        "SELECT\n",
+        "  event_type,\n",
+        "  CASE\n",
+        "    WHEN event_type IN ('A01', 'A04') THEN 'Admit'\n",
+        "    WHEN event_type = 'A03' THEN 'Discharge'\n",
+        "    WHEN event_type IN ('A02', 'A06', 'A07') THEN 'Transfer'\n",
+        "    WHEN event_type = 'A08' THEN 'Update'\n",
+        "    ELSE 'Other'\n",
+        "  END AS flow_category,\n",
+        "  facility_code,\n",
+        "  patient_class,\n",
+        "  COUNT(*) AS event_count,\n",
+        "  COUNT(DISTINCT patient_id) AS unique_patients\n",
+        "FROM\n",
+        "  ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.adt_events\n",
+        "WHERE\n",
+        "  event_ts IS NOT NULL\n",
+        "GROUP BY\n",
+        "  1,\n",
+        "  2,\n",
+        "  3,\n",
+        "  4"
+      ]
+    },
+    {
+      "name": "hourly_heatmap",
+      "displayName": "Hourly Event Heatmap",
+      "queryLines": [
+        "SELECT\n",
+        "  DAYOFWEEK(event_ts) AS day_of_week,\n",
+        "  CASE DAYOFWEEK(event_ts)\n",
+        "    WHEN 1 THEN 'Sun'\n",
+        "    WHEN 2 THEN 'Mon'\n",
+        "    WHEN 3 THEN 'Tue'\n",
+        "    WHEN 4 THEN 'Wed'\n",
+        "    WHEN 5 THEN 'Thu'\n",
+        "    WHEN 6 THEN 'Fri'\n",
+        "    WHEN 7 THEN 'Sat'\n",
+        "  END AS day_name,\n",
+        "  HOUR(event_ts) AS hour_of_day,\n",
+        "  COUNT(*) AS event_count\n",
+        "FROM\n",
+        "  ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.adt_events\n",
+        "WHERE\n",
+        "  event_ts IS NOT NULL\n",
+        "GROUP BY\n",
+        "  1,\n",
+        "  2,\n",
+        "  3"
+      ]
+    },
+    {
+      "name": "streaming_freshness",
+      "displayName": "Streaming Freshness",
+      "queryLines": [
+        "SELECT\n",
+        "  MAX(inserted) AS last_message_ts,\n",
+        "  COUNT(*) AS total_messages\n",
+        "FROM\n",
+        "  ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.adt_events"
+      ]
+    },
+    {
+      "name": "length_of_stay",
+      "displayName": "Length of Stay",
+      "queryLines": [
+        "SELECT\n",
+        "  facility_code,\n",
+        "  patient_class,\n",
+        "  unit,\n",
+        "  COUNT(*) AS discharges,\n",
+        "  ROUND(AVG(TIMESTAMPDIFF(HOUR, admit_ts, discharge_ts)), 1) AS avg_los_hours,\n",
+        "  ROUND(MIN(TIMESTAMPDIFF(HOUR, admit_ts, discharge_ts)), 1) AS min_los_hours,\n",
+        "  ROUND(MAX(TIMESTAMPDIFF(HOUR, admit_ts, discharge_ts)), 1) AS max_los_hours\n",
+        "FROM\n",
+        "  ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.adt_events\n",
+        "WHERE\n",
+        "  discharge_ts IS NOT NULL\n",
+        "  AND admit_ts IS NOT NULL\n",
+        "  AND discharge_ts > admit_ts\n",
+        "GROUP BY\n",
+        "  1,\n",
+        "  2,\n",
+        "  3"
+      ]
+    },
+    {
+      "name": "recent_events",
+      "displayName": "Recent ADT Events",
+      "queryLines": [
+        "SELECT\n",
+        "  event_ts,\n",
+        "  event_type,\n",
+        "  CASE\n",
+        "    WHEN event_type IN ('A01', 'A04') THEN 'Admit'\n",
+        "    WHEN event_type = 'A03' THEN 'Discharge'\n",
+        "    WHEN event_type IN ('A02', 'A06', 'A07') THEN 'Transfer'\n",
+        "    WHEN event_type = 'A08' THEN 'Update'\n",
+        "    ELSE 'Other'\n",
+        "  END AS flow,\n",
+        "  facility_code,\n",
+        "  unit,\n",
+        "  room,\n",
+        "  bed,\n",
+        "  patient_class\n",
+        "FROM\n",
+        "  ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.adt_events\n",
+        "WHERE\n",
+        "  event_ts IS NOT NULL\n",
+        "ORDER BY\n",
+        "  event_ts DESC\n",
+        "LIMIT 50"
+      ]
+    },
+    {
+      "name": "events_by_source",
+      "displayName": "Events by Source EMR",
+      "queryLines": [
+        "SELECT\n",
+        "  COALESCE(source_system, 'LEGACY') AS source_system,\n",
+        "  CASE\n",
+        "    WHEN event_type IN ('A01', 'A04') THEN 'Admit'\n",
+        "    WHEN event_type = 'A03' THEN 'Discharge'\n",
+        "    WHEN event_type IN ('A02', 'A06', 'A07') THEN 'Transfer'\n",
+        "    ELSE 'Other'\n",
+        "  END AS flow_category,\n",
+        "  COUNT(*) AS event_count\n",
+        "FROM ${resources.schemas.primary.catalog_name}.${resources.schemas.primary.name}.adt_events\n",
+        "GROUP BY 1, 2"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "bed_utilization_page",
+      "displayName": "Overview",
+      "layout": [
+        {
+          "widget": {
+            "name": "title",
+            "multilineTextboxSpec": {
+              "lines": [
+                "# Hospital Bed Utilization"
+              ],
+              "verticalAlign": "VERTICAL_ALIGN_CENTER"
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "subtitle",
+            "multilineTextboxSpec": {
+              "lines": [
+                "Real-time occupancy across the facility network, sourced from streaming HL7v2 ADT messages."
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi-occupied",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "network_kpi",
+                  "fields": [
+                    {
+                      "name": "occupied_beds",
+                      "expression": "`occupied_beds`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "occupied_beds",
+                  "displayName": "Occupied Beds"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Occupied Beds"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 3,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi-capacity",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "network_kpi",
+                  "fields": [
+                    {
+                      "name": "bed_capacity",
+                      "expression": "`bed_capacity`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "bed_capacity",
+                  "displayName": "Total Capacity"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Total Bed Capacity"
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 3,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi-utilization",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "network_kpi",
+                  "fields": [
+                    {
+                      "name": "utilization_pct",
+                      "expression": "`utilization_pct`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "utilization_pct",
+                  "displayName": "Network Utilization %"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Network Utilization %"
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 3,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "section-facility",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Utilization by Facility"
+              ],
+              "verticalAlign": "VERTICAL_ALIGN_CENTER"
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "bar-util-facility",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "util_by_facility",
+                  "fields": [
+                    {
+                      "name": "facility_name",
+                      "expression": "`facility_name`"
+                    },
+                    {
+                      "name": "sum(utilization_pct)",
+                      "expression": "SUM(`utilization_pct`)"
+                    },
+                    {
+                      "name": "facility_kind",
+                      "expression": "`facility_kind`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "facility_name",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  },
+                  "displayName": "Facility"
+                },
+                "y": {
+                  "fieldName": "sum(utilization_pct)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Utilization %"
+                },
+                "color": {
+                  "fieldName": "facility_kind",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "Kind"
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Utilization % by Facility"
+              },
+              "mark": {
+                "colors": [
+                  "#FF3621",
+                  "#00A972"
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 8,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "pie-occupancy-kind",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "occupancy_by_kind",
+                  "fields": [
+                    {
+                      "name": "sum(occupied_beds)",
+                      "expression": "SUM(`occupied_beds`)"
+                    },
+                    {
+                      "name": "facility_kind",
+                      "expression": "`facility_kind`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "sum(occupied_beds)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Occupied Beds"
+                },
+                "color": {
+                  "fieldName": "facility_kind",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "Kind"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Occupied Beds: Inpatient vs Outpatient"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 8,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "section-flow",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Patient Flow Over Time"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 14,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "line-flow",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "events_over_time",
+                  "fields": [
+                    {
+                      "name": "event_hour",
+                      "expression": "`event_hour`"
+                    },
+                    {
+                      "name": "sum(event_count)",
+                      "expression": "SUM(`event_count`)"
+                    },
+                    {
+                      "name": "flow",
+                      "expression": "`flow`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "event_hour",
+                  "scale": {
+                    "type": "temporal"
+                  },
+                  "displayName": "Hour"
+                },
+                "y": {
+                  "fieldName": "sum(event_count)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Events"
+                },
+                "color": {
+                  "fieldName": "flow",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "Event"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Admits, Discharges & Transfers per Hour"
+              },
+              "mark": {
+                "colors": [
+                  "#00A972",
+                  "#FF3621",
+                  "#FFAB00"
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 16,
+            "width": 12,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "section-unit",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Unit Detail"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 22,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "table-unit-detail",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "unit_detail",
+                  "fields": [
+                    {
+                      "name": "facility_name",
+                      "expression": "`facility_name`"
+                    },
+                    {
+                      "name": "unit",
+                      "expression": "`unit`"
+                    },
+                    {
+                      "name": "patient_class",
+                      "expression": "`patient_class`"
+                    },
+                    {
+                      "name": "occupied_beds",
+                      "expression": "`occupied_beds`"
+                    },
+                    {
+                      "name": "bed_capacity",
+                      "expression": "`bed_capacity`"
+                    },
+                    {
+                      "name": "available_beds",
+                      "expression": "`available_beds`"
+                    },
+                    {
+                      "name": "utilization_pct",
+                      "expression": "`utilization_pct`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "facility_name",
+                    "displayName": "Facility"
+                  },
+                  {
+                    "fieldName": "unit",
+                    "displayName": "Unit"
+                  },
+                  {
+                    "fieldName": "patient_class",
+                    "displayName": "Class"
+                  },
+                  {
+                    "fieldName": "occupied_beds",
+                    "displayName": "Occupied"
+                  },
+                  {
+                    "fieldName": "bed_capacity",
+                    "displayName": "Capacity"
+                  },
+                  {
+                    "fieldName": "available_beds",
+                    "displayName": "Available"
+                  },
+                  {
+                    "fieldName": "utilization_pct",
+                    "displayName": "Utilization %"
+                  }
+                ]
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Occupancy by Unit"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 24,
+            "width": 12,
+            "height": 7
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "patient_flow",
+      "displayName": "Patient Flow",
+      "layout": [
+        {
+          "widget": {
+            "name": "title",
+            "multilineTextboxSpec": {
+              "lines": [
+                "# Patient Flow Analytics"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "subtitle",
+            "multilineTextboxSpec": {
+              "lines": [
+                "Deep-dive into ADT event patterns, event classification, and length of stay metrics from streaming HL7v2 messages."
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_total_events",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "streaming_freshness",
+                  "fields": [
+                    {
+                      "name": "total_messages",
+                      "expression": "`total_messages`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Total Messages Processed"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "total_messages"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 3,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_unique_patients",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "event_type_breakdown",
+                  "fields": [
+                    {
+                      "name": "sum(unique_patients)",
+                      "expression": "SUM(`unique_patients`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Unique Patients"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(unique_patients)"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 3,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_freshness",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "streaming_freshness",
+                  "fields": [
+                    {
+                      "name": "last_message_ts",
+                      "expression": "`last_message_ts`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Last Message Time"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "last_message_ts"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 3,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "section_event_breakdown",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Event Classification"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "bar_flow_category",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "event_type_breakdown",
+                  "fields": [
+                    {
+                      "name": "flow_category",
+                      "expression": "`flow_category`"
+                    },
+                    {
+                      "name": "sum(event_count)",
+                      "expression": "SUM(`event_count`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Events by Flow Category"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "flow_category",
+                  "displayName": "Flow Category",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(event_count)",
+                  "displayName": "Event Count",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "flow_category",
+                  "displayName": "Category",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 8,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "pie_patient_class",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "event_type_breakdown",
+                  "fields": [
+                    {
+                      "name": "sum(event_count)",
+                      "expression": "SUM(`event_count`)"
+                    },
+                    {
+                      "name": "patient_class",
+                      "expression": "`patient_class`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Events by Patient Class"
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "sum(event_count)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Events"
+                },
+                "color": {
+                  "fieldName": "patient_class",
+                  "displayName": "Patient Class",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 8,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "section_heatmap",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Arrival Patterns"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 14,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "heatmap_hourly",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "hourly_heatmap",
+                  "fields": [
+                    {
+                      "name": "sum(event_count)",
+                      "expression": "SUM(`event_count`)"
+                    },
+                    {
+                      "name": "hour_of_day",
+                      "expression": "`hour_of_day`"
+                    },
+                    {
+                      "name": "day_name",
+                      "expression": "`day_name`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Event Volume Heatmap"
+              },
+              "widgetType": "heatmap",
+              "encodings": {
+                "x": {
+                  "fieldName": "hour_of_day",
+                  "displayName": "Hour of Day",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "day_name",
+                  "displayName": "Day of Week",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "custom-order",
+                      "orderedValues": [
+                        "Mon",
+                        "Tue",
+                        "Wed",
+                        "Thu",
+                        "Fri",
+                        "Sat",
+                        "Sun"
+                      ]
+                    }
+                  }
+                },
+                "color": {
+                  "fieldName": "sum(event_count)",
+                  "displayName": "Events",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 16,
+            "width": 12,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "section_los",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Length of Stay"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 23,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "bar_los",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "length_of_stay",
+                  "fields": [
+                    {
+                      "name": "unit",
+                      "expression": "`unit`"
+                    },
+                    {
+                      "name": "avg(avg_los_hours)",
+                      "expression": "AVG(`avg_los_hours`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Avg Length of Stay by Unit"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "unit",
+                  "displayName": "Unit",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(avg_los_hours)",
+                  "displayName": "Avg Hours",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 25,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "table_los",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "length_of_stay",
+                  "fields": [
+                    {
+                      "name": "facility_code",
+                      "expression": "`facility_code`"
+                    },
+                    {
+                      "name": "unit",
+                      "expression": "`unit`"
+                    },
+                    {
+                      "name": "patient_class",
+                      "expression": "`patient_class`"
+                    },
+                    {
+                      "name": "discharges",
+                      "expression": "`discharges`"
+                    },
+                    {
+                      "name": "avg_los_hours",
+                      "expression": "`avg_los_hours`"
+                    },
+                    {
+                      "name": "min_los_hours",
+                      "expression": "`min_los_hours`"
+                    },
+                    {
+                      "name": "max_los_hours",
+                      "expression": "`max_los_hours`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Length of Stay Detail"
+              },
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "facility_code",
+                    "displayName": "Facility"
+                  },
+                  {
+                    "fieldName": "unit",
+                    "displayName": "Unit"
+                  },
+                  {
+                    "fieldName": "patient_class",
+                    "displayName": "Class"
+                  },
+                  {
+                    "fieldName": "discharges",
+                    "displayName": "Discharges"
+                  },
+                  {
+                    "fieldName": "avg_los_hours",
+                    "displayName": "Avg LOS (hrs)"
+                  },
+                  {
+                    "fieldName": "min_los_hours",
+                    "displayName": "Min"
+                  },
+                  {
+                    "fieldName": "max_los_hours",
+                    "displayName": "Max"
+                  }
+                ]
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 25,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "bar-events-by-source",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "events_by_source",
+                  "fields": [
+                    {
+                      "name": "source_system",
+                      "expression": "`source_system`"
+                    },
+                    {
+                      "name": "flow_category",
+                      "expression": "`flow_category`"
+                    },
+                    {
+                      "name": "sum(event_count)",
+                      "expression": "SUM(`event_count`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "source_system",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  },
+                  "displayName": "Source EMR"
+                },
+                "y": {
+                  "fieldName": "sum(event_count)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Events"
+                },
+                "color": {
+                  "fieldName": "flow_category",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "Flow"
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "ADT Events by Source EMR"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 31,
+            "width": 12,
+            "height": 7
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "capacity_alerts",
+      "displayName": "Capacity Alerts",
+      "layout": [
+        {
+          "widget": {
+            "name": "title",
+            "multilineTextboxSpec": {
+              "lines": [
+                "# Capacity Alerts & Live Feed"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "subtitle",
+            "multilineTextboxSpec": {
+              "lines": [
+                "Units approaching or exceeding safe capacity thresholds. Data updates in near real-time from streaming ADT pipeline."
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_critical_count",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "critical_units",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`status` IN ('CRITICAL')"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Critical Units"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)",
+                  "style": {
+                    "color": "#EF4444",
+                    "bold": true
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 3,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_warning_count",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "critical_units",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "`status` IN ('WARNING')"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Warning Units"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)",
+                  "style": {
+                    "color": "#F59E0B",
+                    "bold": true
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 3,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "kpi_stream_latency",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "streaming_freshness",
+                  "fields": [
+                    {
+                      "name": "last_message_ts",
+                      "expression": "`last_message_ts`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Data Freshness"
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "last_message_ts"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 3,
+            "width": 4,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "section_critical",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Units Requiring Attention"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "table_critical",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "critical_units",
+                  "fields": [
+                    {
+                      "name": "status",
+                      "expression": "`status`"
+                    },
+                    {
+                      "name": "facility_name",
+                      "expression": "`facility_name`"
+                    },
+                    {
+                      "name": "unit",
+                      "expression": "`unit`"
+                    },
+                    {
+                      "name": "patient_class",
+                      "expression": "`patient_class`"
+                    },
+                    {
+                      "name": "occupied_beds",
+                      "expression": "`occupied_beds`"
+                    },
+                    {
+                      "name": "bed_capacity",
+                      "expression": "`bed_capacity`"
+                    },
+                    {
+                      "name": "available_beds",
+                      "expression": "`available_beds`"
+                    },
+                    {
+                      "name": "utilization_pct",
+                      "expression": "`utilization_pct`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Critical Units Table"
+              },
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "status",
+                    "displayName": "Status"
+                  },
+                  {
+                    "fieldName": "facility_name",
+                    "displayName": "Facility"
+                  },
+                  {
+                    "fieldName": "unit",
+                    "displayName": "Unit"
+                  },
+                  {
+                    "fieldName": "patient_class",
+                    "displayName": "Class"
+                  },
+                  {
+                    "fieldName": "occupied_beds",
+                    "displayName": "Occupied"
+                  },
+                  {
+                    "fieldName": "bed_capacity",
+                    "displayName": "Capacity"
+                  },
+                  {
+                    "fieldName": "available_beds",
+                    "displayName": "Available"
+                  },
+                  {
+                    "fieldName": "utilization_pct",
+                    "displayName": "Util %"
+                  }
+                ]
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 8,
+            "width": 12,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "section_live",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## Live Event Feed"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 15,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "table_live_events",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "recent_events",
+                  "fields": [
+                    {
+                      "name": "event_ts",
+                      "expression": "`event_ts`"
+                    },
+                    {
+                      "name": "flow",
+                      "expression": "`flow`"
+                    },
+                    {
+                      "name": "event_type",
+                      "expression": "`event_type`"
+                    },
+                    {
+                      "name": "facility_code",
+                      "expression": "`facility_code`"
+                    },
+                    {
+                      "name": "unit",
+                      "expression": "`unit`"
+                    },
+                    {
+                      "name": "room",
+                      "expression": "`room`"
+                    },
+                    {
+                      "name": "bed",
+                      "expression": "`bed`"
+                    },
+                    {
+                      "name": "patient_class",
+                      "expression": "`patient_class`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Recent ADT Events"
+              },
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "event_ts",
+                    "displayName": "Timestamp"
+                  },
+                  {
+                    "fieldName": "flow",
+                    "displayName": "Flow"
+                  },
+                  {
+                    "fieldName": "event_type",
+                    "displayName": "Type"
+                  },
+                  {
+                    "fieldName": "facility_code",
+                    "displayName": "Facility"
+                  },
+                  {
+                    "fieldName": "unit",
+                    "displayName": "Unit"
+                  },
+                  {
+                    "fieldName": "room",
+                    "displayName": "Room"
+                  },
+                  {
+                    "fieldName": "bed",
+                    "displayName": "Bed"
+                  },
+                  {
+                    "fieldName": "patient_class",
+                    "displayName": "Class"
+                  }
+                ]
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 17,
+            "width": 12,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "bar_util_by_facility",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "critical_units",
+                  "fields": [
+                    {
+                      "name": "facility_name",
+                      "expression": "`facility_name`"
+                    },
+                    {
+                      "name": "avg(utilization_pct)",
+                      "expression": "AVG(`utilization_pct`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Utilization by Facility"
+              },
+              "annotations": [
+                {
+                  "type": "horizontal-line",
+                  "encodings": {
+                    "type": "constant",
+                    "y": {
+                      "dataValue": "95",
+                      "dataType": "DOUBLE"
+                    },
+                    "label": {
+                      "value": "Critical Threshold"
+                    },
+                    "color": {
+                      "value": "#EF4444"
+                    }
+                  }
+                }
+              ],
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "facility_name",
+                  "displayName": "Facility",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(utilization_pct)",
+                  "displayName": "Utilization %",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 25,
+            "width": 12,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "global_filters",
+      "displayName": "Global Filters",
+      "layout": [
+        {
+          "widget": {
+            "name": "facility_filter",
+            "queries": [
+              {
+                "name": "dashboards/01f17a5ffa521c41873f92848f711bb2/datasets/01f17a5ffa521feaa31d00625407ecc7_facility_name",
+                "query": {
+                  "datasetName": "unit_detail",
+                  "fields": [
+                    {
+                      "name": "facility_name",
+                      "expression": "`facility_name`"
+                    },
+                    {
+                      "name": "facility_name_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Facility",
+                "showTitle": true
+              },
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "facility_name",
+                    "queryName": "dashboards/01f17a5ffa521c41873f92848f711bb2/datasets/01f17a5ffa521feaa31d00625407ecc7_facility_name"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "patient_class_filter",
+            "queries": [
+              {
+                "name": "dashboards/01f17a5ffa521c41873f92848f711bb2/datasets/01f17a5ffa521feaa31d00625407ecc7_patient_class",
+                "query": {
+                  "datasetName": "unit_detail",
+                  "fields": [
+                    {
+                      "name": "patient_class",
+                      "expression": "`patient_class`"
+                    },
+                    {
+                      "name": "patient_class_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Patient Class",
+                "showTitle": true
+              },
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "patient_class",
+                    "queryName": "dashboards/01f17a5ffa521c41873f92848f711bb2/datasets/01f17a5ffa521feaa31d00625407ecc7_patient_class"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 0,
+            "width": 3,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "unit_filter",
+            "queries": [
+              {
+                "name": "dashboards/01f17a5ffa521c41873f92848f711bb2/datasets/01f17a5ffa521feaa31d00625407ecc7_unit",
+                "query": {
+                  "datasetName": "unit_detail",
+                  "fields": [
+                    {
+                      "name": "unit",
+                      "expression": "`unit`"
+                    },
+                    {
+                      "name": "unit_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Unit",
+                "showTitle": true
+              },
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "unit",
+                    "queryName": "dashboards/01f17a5ffa521c41873f92848f711bb2/datasets/01f17a5ffa521feaa31d00625407ecc7_unit"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 0,
+            "width": 3,
+            "height": 3
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_GLOBAL_FILTERS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "canvasBackgroundColor": {
+        "light": "#F0F4F8",
+        "dark": "#0D1117"
+      },
+      "widgetBackgroundColor": {
+        "light": "#FFFFFF",
+        "dark": "#161B22"
+      },
+      "widgetBorderColor": {
+        "light": "#E2E8F0",
+        "dark": "#30363D"
+      },
+      "fontColor": {
+        "light": "#1A202C",
+        "dark": "#E2E8F0"
+      },
+      "selectionColor": {
+        "light": "#0891B2",
+        "dark": "#22D3EE"
+      },
+      "visualizationColors": [
+        "#0891B2",
+        "#6366F1",
+        "#EC4899",
+        "#F59E0B",
+        "#10B981",
+        "#8B5CF6",
+        "#EF4444",
+        "#06B6D4",
+        "#84CC16",
+        "#F97316"
+      ],
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED",
+      "fontFamily": "Inter",
+      "textBoxVerticalAlign": "VERTICAL_ALIGN_CENTER",
+      "widgetPadding": 16,
+      "widgetMargin": 8,
+      "widgetCornerRadius": 12,
+      "widgetShadow": 25,
+      "continuousGradient": {
+        "lightMode": {
+          "customSequential": {
+            "start": "#E0F2FE",
+            "end": "#0891B2"
+          }
+        },
+        "darkMode": {
+          "customSequential": {
+            "start": "#E0F2FE",
+            "end": "#0891B2"
+          }
+        }
+      },
+      "fontSettings": {
+        "base": {
+          "fontFamily": "Inter",
+          "fontColor": {
+            "light": "#1A202C",
+            "dark": "#E2E8F0"
+          },
+          "fontSize": 13,
+          "fontWeight": 400
+        },
+        "widgetTitle": {
+          "fontFamily": "Inter",
+          "textCase": "TEXT_CASE_UNSPECIFIED",
+          "fontSize": 14,
+          "fontWeight": 600
+        },
+        "fieldTitle": {
+          "textCase": "TEXT_CASE_UPPERCASE",
+          "fontColor": {
+            "light": "#64748B",
+            "dark": "#8B949E"
+          },
+          "fontSize": 11,
+          "fontWeight": 500
+        }
+      },
+      "gridLineColor": {
+        "light": "#E2E8F0",
+        "dark": "#30363D"
+      },
+      "axisLineColor": {
+        "light": "#CBD5E1",
+        "dark": "#484F58"
+      }
+    },
+    "applyModeEnabled": false
+  }
+}

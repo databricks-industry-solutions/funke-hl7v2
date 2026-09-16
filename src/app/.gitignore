@@ -1,0 +1,19 @@
+# Node / Vite
+frontend/node_modules/
+frontend/.vite/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# NOTE: frontend/dist/ and funke/ (vendored engine) are intentionally committed —
+# Databricks Apps sync respects .gitignore, so both must be tracked to deploy.
+# The root .gitignore ignores any `dist/`; re-include the built frontend here.
+!frontend/dist/
+!frontend/dist/**

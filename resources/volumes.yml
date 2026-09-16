@@ -1,0 +1,8 @@
+resources:
+  volumes:
+    # This is where we will land the incoming HL7 messages
+    landing:
+      name: landing
+      schema_name: ${resources.schemas.primary.name}
+      catalog_name: ${var.catalog}
+      volume_type: MANAGED

@@ -1,0 +1,14 @@
+resources:
+  jobs:
+    setup_metric_views:
+      name: Setup Bed Utilization Metric Views
+      description: >-
+        One-shot job that (re)creates the Unity Catalog metric views over the gold tables.
+        Run after the Lakeflow pipeline has materialized adt_events / bed_utilization.
+      tasks:
+        - task_key: create_metric_views
+          notebook_task:
+            notebook_path: ./setup_metric_views.py
+            base_parameters:
+              catalog: ${var.catalog}
+              schema: ${resources.schemas.primary.name}
