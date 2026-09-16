@@ -56,7 +56,7 @@ parsed_df = raw_df.withColumn("hl7", parse(F.col("content")))
 
 ## Reference Architecture
 
-<img width="631" height="128" alt="image" src="https://github.com/user-attachments/assets/2bd0dd56-dc7b-4374-b49a-bbd1f9dd279b" />
+<img width="631" height="128" alt="507301026-2bd0dd56-dc7b-4374-b49a-bbd1f9dd279b" src="https://github.com/user-attachments/assets/85c299ff-dc44-401f-ae7b-f22cea01b385" />
 
 Funke provides a declarative pipeline with two tables:
 - `raw_messages` is the initial landing spot for new HL7 messages. It stores the message as plain text alongside some basic metadata about the ingestion (timestamps, hashes, size, etc.)
