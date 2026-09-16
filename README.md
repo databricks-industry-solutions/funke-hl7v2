@@ -1,6 +1,6 @@
 <img src=https://raw.githubusercontent.com/databricks-industry-solutions/.github/main/profile/solacc_logo.png width="600px">
 
-# funke — native HL7v2 parsing for the Databricks Lakehouse
+# funke - native HL7v2 parsing for the Databricks Lakehouse
 
 [![DBR](https://img.shields.io/badge/DBR-16.4-red?logo=databricks&style=for-the-badge)](https://docs.databricks.com/release-notes/runtime/CHANGE_ME.html)
 [![CLOUD](https://img.shields.io/badge/CLOUD-ALL-blue?logo=googlecloud&style=for-the-badge)](https://databricks.com/try-databricks)
@@ -25,7 +25,7 @@ This project provides a robust, native solution for ingesting and parsing HL7v2 
 ## Using the `funke` library directly
 
 The pipeline above installs `funke` for you (the Asset Bundle builds and attaches the wheel).
-To use the parser on its own — in a notebook, a job, or locally — install it from source:
+To use the parser on its own (in a notebook, a job, or locally) install it from source:
 
 ```bash
 git clone <this-repo> && cd <this-repo>
