@@ -150,6 +150,24 @@ WHERE
   hl7.MSH[0].fields[9][0][1][1] IS NOT NULL
 ```
 
+## Using funke with AI coding agents
+
+The repo ships an agent skill at `.agents/skills/funke-hl7v2/` that follows the [Agent Skills](https://agentskills.io/specification) format. It teaches coding agents how to install funke, parse messages, query the nested `hl7` column (including repeating segments such as OBX and RXA) and avoid the common pitfalls.
+
+| Agent | How it finds the skill |
+|-------|------------------------|
+| Codex, Cursor | Automatically, from `.agents/skills/` when you open this repo |
+| Claude Code | Automatically, from `.claude/skills/funke-hl7v2` (a symlink to the same folder). On Windows without symlink support, copy `.agents/skills/funke-hl7v2` to `.claude/skills/` |
+| Genie Code | Copy the folder into your user skills folder, or ask a workspace admin to add it to `/Workspace/.assistant/skills/` |
+
+Genie Code install from a local clone:
+
+```bash
+databricks workspace import-dir .agents/skills/funke-hl7v2 /Users/<you>/.assistant/skills/funke-hl7v2 -p <profile>
+```
+
+Then start a new Genie Code chat and ask, for example, "parse the HL7 files in /Volumes/<catalog>/<schema>/<volume> and list the lab results", or type `@funke-hl7v2`.
+
 ## Project support
 Please note the code in this project is provided for your exploration only, and are not formally supported by Databricks with Service Level Agreements (SLAs). They are provided AS-IS and we do not make any guarantees of any kind. Please do not submit a support ticket relating to any issues arising from the use of these projects. The source in this project is provided subject to the Databricks [License](./LICENSE.md). All included or referenced third party libraries are subject to the licenses set forth below.
 
